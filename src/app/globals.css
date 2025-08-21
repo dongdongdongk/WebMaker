@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Fira+Code:wght@300;400;500&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply text-secondary-700 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    @apply font-medium;
+  }
+  
+  code {
+    font-family: 'Fira Code', monospace;
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-700 hover:bg-secondary-200;
+  }
+  
+  .btn-outline {
+    @apply border border-secondary-300 text-secondary-700 hover:bg-secondary-50;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md border border-secondary-200;
+  }
+  
+  .input {
+    @apply border border-secondary-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
