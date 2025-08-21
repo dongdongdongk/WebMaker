@@ -1,76 +1,199 @@
-import { getAllPosts } from '@/lib/posts'
-import PostList from '@/components/PostList'
+import { getAllPosts, getAllTags } from '@/lib/posts'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default async function HomePage() {
   const posts = await getAllPosts()
+  const tags = await getAllTags()
+  const featuredPost = posts[0] // 가장 최신 포스트를 대표 포스트로
+  const recentPosts = posts.slice(1, 7) // 나머지 6개 포스트
   
   return (
-    <div className="space-y-12">
-      <section className="text-center py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI 자동 블로그 시스템
+    <div className="max-w-7xl mx-auto">
+      {/* Hero Section - Blog Header */}
+      <section className="text-center py-16 border-b border-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+          WebMaker Blog
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto px-4">
-          키워드 기반 자동 콘텐츠 생성부터 SEO 최적화, GitHub Actions 자동 배포까지 
-          완전 자동화된 차세대 블로그 플랫폼입니다.
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          AI가 매일 생성하는 최신 기술 트렌드와 인사이트를 만나보세요
         </p>
-        
-        <div className="grid md:grid-cols-3 gap-8 mt-12 px-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              자동 키워드 수집
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Google Trends와 News API를 활용한 실시간 트렌드 키워드 자동 수집
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              AI 콘텐츠 생성
-            </h3>
-            <p className="text-gray-600 text-sm">
-              OpenAI GPT를 활용한 고품질 블로그 콘텐츠 자동 생성 및 SEO 최적화
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              자동 배포
-            </h3>
-            <p className="text-gray-600 text-sm">
-              GitHub Actions와 Vercel을 통한 완전 자동화된 배포 및 관리 시스템
-            </p>
-          </div>
-        </div>
-        
-        <div className="mt-8">
-          <Link 
-            href="/design-preview" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-block"
-          >
-            디자인 시스템 보기
-          </Link>
+        <div className="flex flex-wrap justify-center gap-3">
+          {tags.slice(0, 6).map(({ tag, count }) => (
+            <span
+              key={tag}
+              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer"
+            >
+              {tag} ({count})
+            </span>
+          ))}
         </div>
       </section>
-      
-      <PostList posts={posts} />
+
+      {/* Featured Post */}
+      {featuredPost && (
+        <section className="py-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">오늘의 추천 글</h2>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/2">
+                {featuredPost.image && (
+                  <div className="relative h-64 md:h-full">
+                    <Image
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="md:w-1/2 p-8">
+                <div className="flex items-center mb-4">
+                  <time className="text-sm text-gray-500">
+                    {new Date(featuredPost.date).toLocaleDateString('ko-KR')}
+                  </time>
+                  <span className="mx-2 text-gray-300">•</span>
+                  <span className="text-sm text-gray-500">{featuredPost.readingTime}분 읽기</span>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                  <Link href={`/${featuredPost.slug}`} className="hover:text-blue-600 transition-colors">
+                    {featuredPost.title}
+                  </Link>
+                </h3>
+                
+                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                  {featuredPost.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap gap-2">
+                    {featuredPost.tags?.slice(0, 3).map(tag => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-100 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    href={`/${featuredPost.slug}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                  >
+                    더 읽기
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Recent Posts Grid */}
+      <section className="py-12">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-bold text-gray-900">최신 포스트</h2>
+          <div className="text-sm text-gray-500">
+            총 {posts.length}개의 글
+          </div>
+        </div>
+        
+        {recentPosts.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {recentPosts.map((post) => (
+              <article key={post.slug} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                {post.image && (
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                
+                <div className="p-6">
+                  <div className="flex items-center mb-3 text-sm text-gray-500">
+                    <time>{new Date(post.date).toLocaleDateString('ko-KR')}</time>
+                    <span className="mx-2">•</span>
+                    <span>{post.readingTime}분</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
+                    <Link href={`/${post.slug}`} className="hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </Link>
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1">
+                      {post.tags?.slice(0, 2).map(tag => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    {post.author && (
+                      <div className="text-xs text-gray-500">
+                        by {post.author}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <div className="text-gray-500 text-lg mb-2">
+              추가 게시물이 없습니다
+            </div>
+            <p className="text-gray-400 text-sm">
+              AI가 곧 새로운 콘텐츠를 생성할 예정입니다
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* Blog Stats */}
+      <section className="py-12 border-t border-gray-200">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">블로그 정보</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-2xl font-bold text-blue-600">{posts.length}</div>
+              <div className="text-sm text-gray-600">총 포스트</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-600">{tags.length}</div>
+              <div className="text-sm text-gray-600">카테고리</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-600">24/7</div>
+              <div className="text-sm text-gray-600">자동 운영</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-600">AI</div>
+              <div className="text-sm text-gray-600">콘텐츠 생성</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
