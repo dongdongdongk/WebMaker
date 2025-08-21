@@ -167,16 +167,18 @@ NOTIFICATION_EMAIL=notify@example.com  # Notification recipient
 
 ## Image Handling Strategy
 
-**Free Image Integration:** Use Unsplash source URLs in markdown frontmatter and content:
+**Free Image Integration:** Use Picsum placeholder service in markdown frontmatter and content:
 
 ```markdown
 ---
-title: "AI Trends 2025"
-image: "https://source.unsplash.com/1200x600/?artificial-intelligence"
+title: "AI Trends 2025"  
+image: "https://picsum.photos/1200/600?random=1"
 ---
 
-![AI Technology](https://source.unsplash.com/800x400/?ai-technology)
+![AI Technology](https://picsum.photos/800/400?random=2)
 ```
+
+**Note:** Unsplash source.unsplash.com service has been deprecated. Use Picsum (https://picsum.photos/) for reliable placeholder images with different random parameters.
 
 ## Design System Implementation
 

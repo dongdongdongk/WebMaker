@@ -3,7 +3,7 @@ title: "Next.js 14 완전 정복: 새로운 기능과 성능 개선사항"
 date: "2025-01-19"
 slug: "nextjs-14-features"
 excerpt: "Next.js 14의 혁신적인 기능들을 살펴보고, Server Actions, App Router 개선사항, 성능 최적화 등 핵심 업데이트를 알아보세요."
-image: "https://source.unsplash.com/1200x600/?web-development,coding"
+image: "https://picsum.photos/1200/600?random=2"
 tags:
   - "Next.js"
   - "React"

@@ -3,7 +3,7 @@ title: "2025년 AI 트렌드: 생성형 AI의 새로운 전환점"
 date: "2025-01-20"
 slug: "ai-trends-2025"
 excerpt: "2025년 AI 업계를 이끌어갈 주요 트렌드와 기술 발전 방향을 분석해보습니다. 생성형 AI부터 AGI까지 핵심 포인트를 짚어보세요."
-image: "https://source.unsplash.com/1200x600/?artificial-intelligence,future"
+image: "https://picsum.photos/1200/600?random=1"
 tags:
   - "AI"
   - "트렌드"

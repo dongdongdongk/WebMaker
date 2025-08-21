@@ -3,7 +3,7 @@ title: "WebMaker 시스템 소개: AI 기반 자동 블로그 시스템"
 date: "2025-01-21"
 slug: "sample-post"
 excerpt: "WebMaker는 키워드 기반 콘텐츠 생성부터 SEO 최적화, 자동 배포까지 완전 자동화된 차세대 블로그 플랫폼입니다."
-image: "https://source.unsplash.com/1200x600/?technology,automation"
+image: "https://picsum.photos/1200/600?random=3"
 tags:
   - "AI"
   - "자동화"
