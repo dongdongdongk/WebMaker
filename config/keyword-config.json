@@ -1,0 +1,52 @@
+{
+  "categories": {
+    "technology": [
+      "AI",
+      "인공지능",
+      "머신러닝",
+      "블록체인",
+      "클라우드",
+      "IoT"
+    ],
+    "webdev": [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Vue.js",
+      "TypeScript",
+      "Node.js"
+    ],
+    "mobile": [
+      "React Native",
+      "Flutter",
+      "iOS",
+      "Android",
+      "모바일앱"
+    ],
+    "design": [
+      "UI/UX",
+      "웹디자인",
+      "사용자경험",
+      "디자인시스템"
+    ],
+    "business": [
+      "스타트업",
+      "디지털마케팅",
+      "이커머스",
+      "원격근무"
+    ],
+    "trends": [
+      "2025트렌드",
+      "기술동향",
+      "산업전망",
+      "미래기술"
+    ]
+  },
+  "maxKeywordsPerCategory": 10,
+  "trendingPeriod": "7d",
+  "regions": [
+    "KR",
+    "US"
+  ],
+  "lastUpdated": "2025-08-21T22:07:44.652Z"
+}

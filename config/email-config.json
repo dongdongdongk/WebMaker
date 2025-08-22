@@ -1,0 +1,30 @@
+{
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "your-email@gmail.com",
+      "pass": "your-app-password"
+    }
+  },
+  "recipients": {
+    "success": [
+      "admin@example.com"
+    ],
+    "failure": [
+      "admin@example.com"
+    ],
+    "partial": [
+      "admin@example.com"
+    ]
+  },
+  "options": {
+    "retryAttempts": 3,
+    "retryDelay": 5000,
+    "timeout": 30000,
+    "includeMetrics": true,
+    "includeLinks": true
+  },
+  "lastUpdated": "2025-08-21T22:13:20.034Z"
+}

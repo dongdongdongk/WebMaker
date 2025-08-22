@@ -2,25 +2,22 @@
 title: "Next.js 14 완전 정복: 새로운 기능과 성능 개선사항"
 date: "2025-01-19"
 slug: "nextjs-14-features"
-excerpt: "Next.js 14의 혁신적인 기능들을 살펴보고, Server Actions, App Router 개선사항, 성능 최적화 등 핵심 업데이트를 알아보세요. Next.js 14 완전 정복: 새로운 기능과 성능 개선사항..."
+excerpt: "Next.js 14의 혁신적인 기능들을 살펴보고, Server Actions, App Router 개선사항, 성능 최적화 등 핵심 업데이트를 알아보세요."
 image: "https://picsum.photos/1200/600?random=2"
-author: "WebMaker AI"
 tags:
   - "Next.js"
-  - "개발"
-  - "기술"
-  - "트렌드"
-  - "2025"
-category: "기술"
-readingTime: "1"
+  - "React"
+  - "웹개발"
+  - "프론트엔드"
+  - "JavaScript"
+author: "WebMaker AI"
 ---
-
 
 # Next.js 14 완전 정복: 새로운 기능과 성능 개선사항
 
 Next.js 14가 출시되면서 웹 개발 생태계에 또 한 번의 혁신을 가져왔습니다. 이번 업데이트는 특히 **성능 최적화**와 **개발자 경험(DX) 향상**에 중점을 두었습니다.
 
-## Next.js의 핵심 포인트
+## 🚀 주요 신기능
 
 ### 1. Server Actions (Stable)
 드디어 Server Actions가 안정 버전으로 출시되었습니다!

@@ -15,7 +15,7 @@ export default function PostList({ posts, title = "최신 게시물", showTitle 
           아직 게시물이 없습니다
         </div>
         <p className="text-gray-400 text-sm">
-          AI가 곧 새로운 콘텐츠를 생성할 예정입니다
+          곧 새로운 콘텐츠가 업데이트될 예정입니다
         </p>
       </div>
     )

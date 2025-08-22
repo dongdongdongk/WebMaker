@@ -3,12 +3,16 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { generateSEOMetadata, generateJSONLD, StructuredData } from '@/components/SEO'
+import { getSiteInfo, getSEOConfig, getTheme } from '@/lib/config'
+
+const siteInfo = getSiteInfo()
+const seoConfig = getSEOConfig()
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'WebMaker - AI 자동 블로그 시스템',
-  description: '키워드 기반 자동 콘텐츠 생성부터 SEO 최적화까지 완전 자동화된 블로그 시스템',
-  keywords: ['AI', '블로그', '자동화', 'SEO', 'Next.js', 'GitHub Actions'],
-  url: 'https://webmaker-ai-blog.vercel.app',
+  title: siteInfo.title,
+  description: siteInfo.description,
+  keywords: seoConfig.defaultKeywords,
+  url: siteInfo.url,
   type: 'website'
 })
 
@@ -17,15 +21,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const theme = getTheme()
   const jsonLD = generateJSONLD({
-    title: 'WebMaker - AI 자동 블로그 시스템',
-    description: '키워드 기반 자동 콘텐츠 생성부터 SEO 최적화까지 완전 자동화된 블로그 시스템',
-    url: 'https://webmaker-ai-blog.vercel.app',
+    title: siteInfo.title,
+    description: siteInfo.description,
+    url: siteInfo.url,
     type: 'website'
   })
 
   return (
-    <html lang="ko" className="scroll-smooth">
+    <html lang={theme.language} className="scroll-smooth">
       <head>
         <StructuredData data={jsonLD} />
       </head>

@@ -1,0 +1,46 @@
+{
+  "optimization": {
+    "keywordDensityTarget": 2,
+    "titleOptimization": true,
+    "excerptOptimization": true,
+    "headingOptimization": true,
+    "imageOptimization": true,
+    "metaTagOptimization": true
+  },
+  "rules": {
+    "title": {
+      "minLength": 20,
+      "maxLength": 60,
+      "requiredKeywords": 1
+    },
+    "excerpt": {
+      "minLength": 120,
+      "maxLength": 160,
+      "includeKeyword": true
+    },
+    "content": {
+      "minWords": 300,
+      "keywordDensity": {
+        "min": 0.5,
+        "max": 3
+      },
+      "headingStructure": true,
+      "internalLinks": 0,
+      "imageAltText": true
+    },
+    "meta": {
+      "tags": {
+        "min": 3,
+        "max": 7
+      },
+      "categories": 1,
+      "readingTime": true
+    }
+  },
+  "sitemap": {
+    "generate": true,
+    "priority": 0.8,
+    "changeFreq": "weekly"
+  },
+  "lastUpdated": "2025-08-21T22:12:56.642Z"
+}

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { getSiteInfo, getBranding, getSocialLinks, getSEOConfig } from '@/lib/config'
 
 interface SEOProps {
   title?: string
@@ -13,28 +14,39 @@ interface SEOProps {
 }
 
 export function generateSEOMetadata({
-  title = 'WebMaker - AI 자동 블로그 시스템',
-  description = '키워드 기반 자동 콘텐츠 생성부터 SEO 최적화까지 완전 자동화된 블로그 시스템',
-  keywords = ['AI', '블로그', '자동화', 'SEO', 'Next.js', 'GitHub Actions'],
-  image = 'https://webmaker-ai-blog.vercel.app/og-image.jpg',
-  url = 'https://webmaker-ai-blog.vercel.app',
+  title,
+  description,
+  keywords,
+  image,
+  url,
   type = 'website',
   publishedTime,
-  author = 'WebMaker AI',
+  author,
   tags = [],
 }: SEOProps): Metadata {
-  const siteName = 'WebMaker AI Blog'
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`
+  const siteInfo = getSiteInfo()
+  const branding = getBranding()
+  const social = getSocialLinks()
+  const seoConfig = getSEOConfig()
+  
+  const defaultTitle = title || siteInfo.title
+  const defaultDescription = description || siteInfo.description
+  const defaultKeywords = keywords || seoConfig.defaultKeywords
+  const defaultImage = image || `${siteInfo.url}${seoConfig.ogImage}`
+  const defaultUrl = url || siteInfo.url
+  const defaultAuthor = author || branding.author
+  const siteName = branding.companyName
+  const fullTitle = defaultTitle.includes(siteName) ? defaultTitle : `${defaultTitle} | ${siteName}`
   
   // 모든 키워드 합치기
-  const allKeywords = [...keywords, ...tags].join(', ')
+  const allKeywords = [...defaultKeywords, ...tags].join(', ')
   
   return {
     title: fullTitle,
-    description,
+    description: defaultDescription,
     keywords: allKeywords,
-    authors: [{ name: author }],
-    creator: author,
+    authors: [{ name: defaultAuthor }],
+    creator: defaultAuthor,
     publisher: siteName,
     robots: {
       index: true,
@@ -50,37 +62,37 @@ export function generateSEOMetadata({
     openGraph: {
       type,
       locale: 'ko_KR',
-      url,
+      url: defaultUrl,
       siteName,
       title: fullTitle,
-      description,
+      description: defaultDescription,
       images: [
         {
-          url: image,
+          url: defaultImage,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: defaultTitle,
         },
       ],
       ...(type === 'article' && publishedTime && {
         publishedTime,
-        authors: [author],
+        authors: [defaultAuthor],
         tags,
       }),
     },
     twitter: {
-      card: 'summary_large_image',
-      site: '@webmaker_ai',
-      creator: '@webmaker_ai',
+      card: seoConfig.twitterCard as any,
+      site: social.twitter,
+      creator: social.twitter,
       title: fullTitle,
-      description,
-      images: [image],
+      description: defaultDescription,
+      images: [defaultImage],
     },
     alternates: {
-      canonical: url,
+      canonical: defaultUrl,
     },
     other: {
-      'article:author': author,
+      'article:author': defaultAuthor,
       'article:section': 'Technology',
       'article:tag': tags.join(', '),
     },
@@ -94,10 +106,13 @@ export function generateJSONLD({
   url,
   image,
   publishedTime,
-  author = 'WebMaker AI',
+  author,
   type = 'website',
 }: SEOProps) {
-  const baseUrl = 'https://webmaker-ai-blog.vercel.app'
+  const siteInfo = getSiteInfo()
+  const branding = getBranding()
+  const baseUrl = siteInfo.url
+  const defaultAuthor = author || branding.author
   
   if (type === 'article') {
     return {
@@ -111,16 +126,16 @@ export function generateJSONLD({
       dateModified: publishedTime,
       author: {
         '@type': 'Organization',
-        name: author,
+        name: defaultAuthor,
         url: baseUrl,
       },
       publisher: {
         '@type': 'Organization',
-        name: 'WebMaker AI Blog',
+        name: branding.companyName,
         url: baseUrl,
         logo: {
           '@type': 'ImageObject',
-          url: `${baseUrl}/logo.png`,
+          url: `${baseUrl}${siteInfo.logo}`,
         },
       },
       mainEntityOfPage: {
@@ -133,12 +148,12 @@ export function generateJSONLD({
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'WebMaker AI Blog',
-    description: 'AI가 매일 생성하는 최신 기술 트렌드와 인사이트',
+    name: branding.companyName,
+    description: branding.subtitle,
     url: baseUrl,
     publisher: {
       '@type': 'Organization',
-      name: 'WebMaker AI',
+      name: branding.companyName,
       url: baseUrl,
     },
     potentialAction: {

@@ -1,12 +1,18 @@
 import { getAllPosts, getAllTags } from '@/lib/posts'
 import Image from 'next/image'
 import Link from 'next/link'
+import LoadMoreButton from '@/components/LoadMoreButton'
+import { getBranding } from '@/lib/config'
 
 export default async function HomePage() {
   const posts = await getAllPosts()
   const tags = await getAllTags()
+  const branding = getBranding()
+  
   const featuredPost = posts[0] // 가장 최신 포스트를 대표 포스트로
-  const recentPosts = posts.slice(1, 7) // 나머지 6개 포스트
+  const recentPosts = posts.slice(1, 7) // 나머지 6개 포스트 (기존 로직 유지)
+  const initialPosts = recentPosts.slice(3) // Latest Articles에 처음 보여줄 3개 (인덱스 4-6)
+  const hiddenPosts = posts.slice(7) // 더보기로 보여줄 나머지 포스트들 (인덱스 7부터)
   
   return (
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,14 +20,14 @@ export default async function HomePage() {
       <section className="text-center py-12 mb-12">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            WebMaker
+            {branding.siteName}
           </span>
           <span className="text-3xl md:text-4xl font-medium text-gray-700 ml-4">
-            AI Blog
+            {branding.tagline}
           </span>
         </h1>
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          AI가 매일 생성하는 최신 기술 트렌드와 인사이트
+          {branding.subtitle}
         </p>
       </section>
 
@@ -144,9 +150,10 @@ export default async function HomePage() {
           <p className="text-gray-600 text-lg">총 {posts.length}개의 인사이트</p>
         </div>
         
-        {recentPosts.slice(3).length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recentPosts.slice(3).map((post) => (
+        {initialPosts.length > 0 ? (
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {initialPosts.map((post) => (
               <article key={post.slug} className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 {post.image && (
                   <div className="relative h-48 overflow-hidden">
@@ -202,28 +209,20 @@ export default async function HomePage() {
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+            
+            {/* Load More Button Component */}
+            <LoadMoreButton hiddenPosts={hiddenPosts} />
+          </>
         ) : (
           <div className="text-center py-12">
             <div className="text-gray-500 text-lg mb-2">
               추가 게시물이 없습니다
             </div>
             <p className="text-gray-400 text-sm">
-              AI가 곧 새로운 콘텐츠를 생성할 예정입니다
+              곧 새로운 콘텐츠가 업데이트될 예정입니다
             </p>
-          </div>
-        )}
-        
-        {/* Load More Button */}
-        {posts.length > 6 && (
-          <div className="text-center mt-12">
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1">
-              Load More Articles
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </button>
           </div>
         )}
       </section>

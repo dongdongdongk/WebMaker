@@ -135,12 +135,12 @@ export default async function PostPage({ params }: PostPageProps) {
               이 글이 도움이 되셨나요?
             </h3>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-              AI가 자동으로 생성한 콘텐츠입니다. 매일 새로운 트렌드와 인사이트를 제공합니다.
+              매일 새로운 트렌드와 인사이트를 제공합니다.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-gray-600">
               <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
-                <span className="text-xl mr-2">🤖</span>
-                <span className="font-medium">AI 생성</span>
+                <span className="text-xl mr-2">📝</span>
+                <span className="font-medium">전문 콘텐츠</span>
               </div>
               <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
                 <span className="text-xl mr-2">📅</span>

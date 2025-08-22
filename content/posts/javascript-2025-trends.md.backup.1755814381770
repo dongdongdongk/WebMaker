@@ -2,25 +2,21 @@
 title: "JavaScript 2025: 새로운 프레임워크와 라이브러리 동향"
 date: "2025-01-18"
 slug: "javascript-2025-trends"
-excerpt: "2025년 JavaScript 생태계의 주요 변화와 새롭게 주목받는 프레임워크들을 살펴봅니다. JavaScript 2025: 새로운 프레임워크와 라이브러리 동향..."
+excerpt: "2025년 JavaScript 생태계의 주요 변화와 새롭게 주목받는 프레임워크들을 살펴봅니다."
 image: "https://picsum.photos/1200/600?random=4"
-author: "WebMaker AI"
 tags:
   - "JavaScript"
-  - "개발"
-  - "기술"
+  - "프레임워크"
+  - "웹개발"
   - "트렌드"
-  - "2025"
-category: "웹개발"
-readingTime: "1"
+author: "WebMaker AI"
 ---
-
 
 # JavaScript 2025: 새로운 프레임워크와 라이브러리 동향
 
 JavaScript 생태계는 끊임없이 진화하고 있습니다. 2025년에는 어떤 변화가 우리를 기다리고 있을까요?
 
-## JavaScript의 핵심 포인트
+## 🚀 주목받는 새로운 프레임워크
 
 ### Astro 3.0
 - **정적 사이트 생성의 혁신**

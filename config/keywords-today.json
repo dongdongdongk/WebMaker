@@ -1,0 +1,200 @@
+{
+  "date": "2025-08-21",
+  "timestamp": "2025-08-21T22:07:50.748Z",
+  "totalCollected": 33,
+  "finalKeywords": [
+    {
+      "keyword": "원격근무",
+      "score": 119.04526157212504,
+      "category": "business",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "next.js",
+      "score": 116.69593723562744,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "chatgpt",
+      "score": 95,
+      "category": "ai-news",
+      "source": "news-api"
+    },
+    {
+      "keyword": "사용자경험",
+      "score": 82.8189743753444,
+      "category": "design",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "기술동향",
+      "score": 81.27155667848567,
+      "category": "trends",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "모바일앱",
+      "score": 80.26260901664502,
+      "category": "mobile",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "flutter",
+      "score": 78.82596959587511,
+      "category": "mobile",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "스타트업",
+      "score": 78.55729185700517,
+      "category": "business",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "메타버스",
+      "score": 78,
+      "category": "tech-news",
+      "source": "news-api"
+    },
+    {
+      "keyword": "미래기술",
+      "score": 75.77254167557385,
+      "category": "trends",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "디자인시스템",
+      "score": 69.65876583324044,
+      "category": "design",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "디지털마케팅",
+      "score": 66.89899077952629,
+      "category": "business",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "vue.js",
+      "score": 66.45788013214808,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "웹3.0",
+      "score": 65,
+      "category": "blockchain-news",
+      "source": "news-api"
+    },
+    {
+      "keyword": "javascript",
+      "score": 63.44705344176789,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "ui/ux",
+      "score": 62.96910625114668,
+      "category": "design",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "산업전망",
+      "score": 56.01408291523391,
+      "category": "trends",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "양자컴퓨팅",
+      "score": 52,
+      "category": "future-tech",
+      "source": "news-api"
+    },
+    {
+      "keyword": "iot",
+      "score": 49.14955199925252,
+      "category": "technology",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "클라우드",
+      "score": 47.178358781007255,
+      "category": "technology",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "ios",
+      "score": 44.667308866755214,
+      "category": "mobile",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "블록체인",
+      "score": 40.99645807868394,
+      "category": "technology",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "ai",
+      "score": 36.68788240136365,
+      "category": "technology",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "node.js",
+      "score": 36.31343952141333,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "2025트렌드",
+      "score": 30.716490444278616,
+      "category": "trends",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "android",
+      "score": 28.12957169500045,
+      "category": "mobile",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "머신러닝",
+      "score": 26.72669435705428,
+      "category": "technology",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "typescript",
+      "score": 24.169966935200048,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "react",
+      "score": 22.160060333364545,
+      "category": "webdev",
+      "source": "google-trends"
+    },
+    {
+      "keyword": "인공지능",
+      "score": 22.106144401509436,
+      "category": "technology",
+      "source": "google-trends"
+    }
+  ],
+  "categories": [
+    "technology",
+    "webdev",
+    "mobile",
+    "design",
+    "business",
+    "trends"
+  ],
+  "metadata": {
+    "generatedBy": "collect-keywords.js",
+    "version": "1.0.0",
+    "executionTime": 1755814070748
+  }
+}

@@ -2,19 +2,15 @@
 title: "클라우드 컴퓨팅 초보자 가이드: AWS vs Azure vs GCP"
 date: "2025-01-14"
 slug: "cloud-computing-guide"
-excerpt: "주요 클라우드 플랫폼을 비교하고 프로젝트에 맞는 선택 기준을 제시합니다. 클라우드 컴퓨팅 초보자 가이드..."
+excerpt: "주요 클라우드 플랫폼을 비교하고 프로젝트에 맞는 선택 기준을 제시합니다."
 image: "https://picsum.photos/1200/600?random=8"
-author: "WebMaker AI"
 tags:
   - "클라우드"
-  - "개발"
-  - "기술"
-  - "트렌드"
-  - "2025"
-category: "기술"
-readingTime: "1"
+  - "AWS"
+  - "Azure"
+  - "GCP"
+author: "WebMaker AI"
 ---
-
 
 # 클라우드 컴퓨팅 초보자 가이드
 

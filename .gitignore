@@ -48,3 +48,7 @@ next-env.d.ts
 # Misc
 nul
 .vercel
+
+# Documentation
+docs/
+CLAUDE.md
