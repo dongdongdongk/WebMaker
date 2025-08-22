@@ -1,187 +1,268 @@
 {
-  "date": "2025-08-21",
-  "timestamp": "2025-08-21T22:07:50.748Z",
-  "totalCollected": 33,
+  "date": "2025-08-22",
+  "timestamp": "2025-08-22T11:16:46.168Z",
+  "executionTimeMs": 42541,
+  "totalCollected": 26,
   "finalKeywords": [
     {
-      "keyword": "원격근무",
-      "score": 119.04526157212504,
-      "category": "business",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "next.js",
-      "score": 116.69593723562744,
+      "keyword": "JavaScript",
+      "score": 100,
+      "growth": 261,
       "category": "webdev",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "chatgpt",
-      "score": 95,
-      "category": "ai-news",
-      "source": "news-api"
-    },
-    {
-      "keyword": "사용자경험",
-      "score": 82.8189743753444,
-      "category": "design",
-      "source": "google-trends"
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 178,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
       "keyword": "기술동향",
-      "score": 81.27155667848567,
+      "score": 100,
+      "growth": 191,
       "category": "trends",
-      "source": "google-trends"
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 157,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "keyword": "모바일앱",
-      "score": 80.26260901664502,
-      "category": "mobile",
-      "source": "google-trends"
+      "keyword": "TypeScript",
+      "score": 100,
+      "growth": 170,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 151,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "keyword": "flutter",
-      "score": 78.82596959587511,
-      "category": "mobile",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "스타트업",
-      "score": 78.55729185700517,
-      "category": "business",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "메타버스",
-      "score": 78,
-      "category": "tech-news",
-      "source": "news-api"
+      "keyword": "React",
+      "score": 100,
+      "growth": 168,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 150,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
       "keyword": "미래기술",
-      "score": 75.77254167557385,
+      "score": 100,
+      "growth": 159,
       "category": "trends",
-      "source": "google-trends"
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 148,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "keyword": "디자인시스템",
-      "score": 69.65876583324044,
+      "keyword": "사용자경험",
+      "score": 70,
+      "growth": 256,
       "category": "design",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "디지털마케팅",
-      "score": 66.89899077952629,
-      "category": "business",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "vue.js",
-      "score": 66.45788013214808,
-      "category": "webdev",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "웹3.0",
-      "score": 65,
-      "category": "blockchain-news",
-      "source": "news-api"
-    },
-    {
-      "keyword": "javascript",
-      "score": 63.44705344176789,
-      "category": "webdev",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "ui/ux",
-      "score": 62.96910625114668,
-      "category": "design",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "산업전망",
-      "score": 56.01408291523391,
-      "category": "trends",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "양자컴퓨팅",
-      "score": 52,
-      "category": "future-tech",
-      "source": "news-api"
-    },
-    {
-      "keyword": "iot",
-      "score": 49.14955199925252,
-      "category": "technology",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "클라우드",
-      "score": 47.178358781007255,
-      "category": "technology",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "ios",
-      "score": 44.667308866755214,
-      "category": "mobile",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "블록체인",
-      "score": 40.99645807868394,
-      "category": "technology",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "ai",
-      "score": 36.68788240136365,
-      "category": "technology",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "node.js",
-      "score": 36.31343952141333,
-      "category": "webdev",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "2025트렌드",
-      "score": 30.716490444278616,
-      "category": "trends",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "android",
-      "score": 28.12957169500045,
-      "category": "mobile",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "머신러닝",
-      "score": 26.72669435705428,
-      "category": "technology",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "typescript",
-      "score": 24.169966935200048,
-      "category": "webdev",
-      "source": "google-trends"
-    },
-    {
-      "keyword": "react",
-      "score": 22.160060333364545,
-      "category": "webdev",
-      "source": "google-trends"
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 147,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
       "keyword": "인공지능",
-      "score": 22.106144401509436,
+      "score": 100,
+      "growth": 125,
       "category": "technology",
-      "source": "google-trends"
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 138,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "React Native",
+      "score": 100,
+      "growth": 123,
+      "category": "mobile",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 137,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "Flutter",
+      "score": 100,
+      "growth": 114,
+      "category": "mobile",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 134,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "디자인시스템",
+      "score": 100,
+      "growth": 103,
+      "category": "design",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 131,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "Next.js",
+      "score": 92,
+      "growth": 125,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 130,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "산업전망",
+      "score": 94,
+      "growth": 115,
+      "category": "trends",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 129,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "웹디자인",
+      "score": 100,
+      "growth": 91,
+      "category": "design",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 127,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "2025트렌드",
+      "score": 98,
+      "growth": 90,
+      "category": "trends",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 125,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "이커머스",
+      "score": 100,
+      "growth": 79,
+      "category": "business",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 124,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "Android",
+      "score": 100,
+      "growth": 75,
+      "category": "mobile",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 123,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "블록체인",
+      "score": 100,
+      "growth": 68,
+      "category": "technology",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 120,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "스타트업",
+      "score": 81,
+      "growth": 123,
+      "category": "business",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 118,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "디지털마케팅",
+      "score": 89,
+      "growth": 83,
+      "category": "business",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 114,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "클라우드",
+      "score": 100,
+      "growth": 38,
+      "category": "technology",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 111,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "AI",
+      "score": 98,
+      "growth": 26,
+      "category": "technology",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 106,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "모바일앱",
+      "score": 100,
+      "growth": 20,
+      "category": "mobile",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 106,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "머신러닝",
+      "score": 84,
+      "growth": 56,
+      "category": "technology",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 101,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "원격근무",
+      "score": 100,
+      "growth": 0,
+      "category": "business",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 100,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "iOS",
+      "score": 87,
+      "growth": 28,
+      "category": "mobile",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 95,
+      "timestamp": "2025-08-22T11:16:46.167Z"
+    },
+    {
+      "keyword": "Vue.js",
+      "score": 73,
+      "growth": 0,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 73,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     }
   ],
   "categories": [
@@ -192,9 +273,44 @@
     "business",
     "trends"
   ],
+  "sources": [],
+  "apiStatus": {
+    "googleTrends": {
+      "api": "googleTrends",
+      "calls": 29,
+      "maxCalls": 100,
+      "remaining": 71,
+      "resetInSeconds": 3557,
+      "resetTime": "2025-08-22T12:16:03.624Z"
+    },
+    "newsApi": {
+      "api": "newsApi",
+      "calls": 0,
+      "maxCalls": 500,
+      "remaining": 500,
+      "resetInSeconds": 86357,
+      "resetTime": "2025-08-23T11:16:03.624Z"
+    },
+    "reddit": {
+      "api": "reddit",
+      "calls": 0,
+      "maxCalls": 60,
+      "remaining": 60,
+      "resetInSeconds": 17,
+      "resetTime": "2025-08-22T11:17:03.624Z"
+    },
+    "gnews": {
+      "api": "gnews",
+      "calls": 0,
+      "maxCalls": 100,
+      "remaining": 100,
+      "resetInSeconds": 86357,
+      "resetTime": "2025-08-23T11:16:03.624Z"
+    }
+  },
   "metadata": {
     "generatedBy": "collect-keywords.js",
-    "version": "1.0.0",
-    "executionTime": 1755814070748
+    "version": "2.0.0",
+    "configPath": "F:\\2025WebProject\\WebMaker\\config\\keyword-config.json"
   }
 }

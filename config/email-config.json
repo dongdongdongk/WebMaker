@@ -10,13 +10,13 @@
   },
   "recipients": {
     "success": [
-      "admin@example.com"
+      "admin@webmaker.ai"
     ],
     "failure": [
-      "admin@example.com"
+      "admin@webmaker.ai"
     ],
     "partial": [
-      "admin@example.com"
+      "admin@webmaker.ai"
     ]
   },
   "options": {
@@ -26,5 +26,5 @@
     "includeMetrics": true,
     "includeLinks": true
   },
-  "lastUpdated": "2025-08-21T22:13:20.034Z"
+  "lastUpdated": "2025-08-22T11:20:17.386Z"
 }

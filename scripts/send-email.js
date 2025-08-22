@@ -297,26 +297,39 @@ class EmailNotifier {
   }
 
   /**
-   * 이메일 발송 시뮬레이션
+   * 실제 이메일 발송
    */
   async sendEmail(to, subject, htmlContent, config) {
     await this.logger.info(`이메일 발송 중: ${to}`);
     
-    // TODO: 실제 이메일 발송 구현
-    // const nodemailer = require('nodemailer');
-    // const transporter = nodemailer.createTransporter(config.smtp);
-    // const result = await transporter.sendMail({
-    //   from: config.smtp.auth.user,
-    //   to,
-    //   subject,
-    //   html: htmlContent
-    // });
+    // 이메일 설정이 없으면 시뮬레이션 모드
+    if (!config.smtp.auth.user || config.smtp.auth.user === 'your-email@gmail.com') {
+      await this.logger.warning('Gmail 설정이 없어 시뮬레이션 모드로 실행');
+      await new Promise(resolve => setTimeout(resolve, 500));
+      await this.logger.info(`이메일 발송 시뮬레이션 완료: ${to}`);
+      return { messageId: 'simulated-' + Date.now() };
+    }
 
-    // 시뮬레이션
-    await new Promise(resolve => setTimeout(resolve, 1000)); // 1초 지연
-    
-    await this.logger.info(`이메일 발송 완료: ${to}`);
-    return { messageId: 'simulated-' + Date.now() };
+    try {
+      const nodemailer = require('nodemailer');
+      const transporter = nodemailer.createTransporter(config.smtp);
+      
+      const result = await transporter.sendMail({
+        from: {
+          name: 'WebMaker AI',
+          address: config.smtp.auth.user
+        },
+        to,
+        subject,
+        html: htmlContent
+      });
+      
+      await this.logger.info(`이메일 발송 완료: ${to}`, { messageId: result.messageId });
+      return result;
+    } catch (error) {
+      await this.logger.error(`이메일 발송 실패: ${to}`, { error: error.message });
+      throw error;
+    }
   }
 
   /**

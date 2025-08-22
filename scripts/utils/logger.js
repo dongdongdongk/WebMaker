@@ -80,6 +80,10 @@ class Logger {
   async error(message, data) {
     await this.log('ERROR', message, data);
   }
+
+  async debug(message, data) {
+    await this.log('DEBUG', message, data);
+  }
 }
 
 module.exports = Logger;

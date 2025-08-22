@@ -137,21 +137,54 @@ gh run list
 - Email notification system
 - Test: Individual script execution locally
 
-**Step 4-6: API Integration Pipeline**
-- Google Trends API integration → keyword collection
-- Puppeteer web scraping → content crawling  
-- OpenAI API integration → blog generation
-- Test: Each script independently, then in sequence
+**Step 4: Core API Integrations**
 
-**Step 7: Unified GitHub Actions Workflow**
-- Complete `daily-content.yml` with full pipeline
-- Error handling and environment variable management
-- Test: End-to-end automated workflow
+- Google Trends API integration → trending keyword collection (npm)
+- Google News RSS feed integration → category-based news gathering
+- NewsAPI.org integration → keyword-targeted global news search
+- GNews API integration → backup news source with different coverage
+- Reddit API integration → community trends and discussion topics
+- OpenAI API integration → intelligent blog content generation
+- Test: Each API script independently with rate limit handling
 
-**Step 8: Monitoring & Notifications**
-- Email templates for success/failure scenarios
-- Detailed logging and statistics
-- Error recovery mechanisms
+**Step 5: Multi-Source Content Crawling System**
+
+- RSS feed parser → structured news data extraction
+- API response normalizer → unified data format across sources
+- Puppeteer selective scraping → gap-filling for uncovered content
+- Content deduplication engine → eliminate redundant articles
+- Relevance scoring algorithm → priority ranking system
+- Test: Cross-source data integration and quality validation
+
+**Step 6: Intelligent Content Processing Pipeline**
+
+- Multi-source content aggregation → consolidated trending topics
+- Context enrichment → Reddit discussions + news articles combination
+- Content quality filtering → credibility and engagement metrics
+- Dynamic prompt generation → context-aware OpenAI requests
+- SEO-optimized blog formatting → structured output with metadata
+- Test: End-to-end content transformation with A/B testing
+
+**Step 7: Advanced GitHub Actions Workflow**
+
+- Parallel API collection jobs → simultaneous multi-source gathering
+- Smart rate limit management → API quota optimization across sources
+- Fallback source routing → automatic failover mechanisms
+- Content quality gates → automated validation checkpoints
+- Complete daily-content.yml with matrix strategy for source handling
+- Environment variable security → encrypted API key management
+- Test: Full pipeline resilience with simulated API failures
+
+**Step 8: Comprehensive Monitoring & Intelligence**
+
+- Multi-dimensional success metrics → source performance analytics
+- Intelligent failure diagnosis → API-specific error categorization
+- Adaptive notification system → severity-based alert routing
+- Performance optimization feedback → learning algorithm for source weighting
+- Detailed logging with source attribution → audit trail and debugging
+- Email templates with source-specific insights → actionable failure reports
+- Auto-recovery mechanisms → intelligent retry logic with exponential backoff
+- Real-time dashboard → live pipeline status and health metrics
 
 ## Required Environment Variables
 

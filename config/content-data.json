@@ -1,336 +1,108 @@
 {
-  "date": "2025-08-21",
-  "timestamp": "2025-08-21T22:10:36.197Z",
-  "totalCrawled": 60,
-  "qualityContent": [
+  "date": "2025-08-22",
+  "timestamp": "2025-08-22T11:18:16.319Z",
+  "executionTimeMs": 5082,
+  "keywords": [
     {
-      "url": "https://news.ycombinator.com/search?q=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4&page=2",
-      "title": "메타버스 관련 최신 기술 동향",
-      "content": "메타버스는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 메타버스 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "메타버스"
-      ],
-      "relevanceScore": 99,
-      "crawledAt": "2025-08-21T22:10:08.037Z",
-      "qualityScore": 74.7,
-      "excerpt": "메타버스는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 메타버스 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "메타버스는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 메타버스 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
+      "keyword": "JavaScript",
+      "score": 100,
+      "growth": 261,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 178,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "url": "https://dev.to/search?q=%EC%9B%90%EA%B2%A9%EA%B7%BC%EB%AC%B4&page=1",
-      "title": "원격근무 관련 최신 기술 동향",
-      "content": "원격근무는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 원격근무 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "원격근무"
-      ],
-      "relevanceScore": 97,
-      "crawledAt": "2025-08-21T22:08:11.434Z",
-      "qualityScore": 74.1,
-      "excerpt": "원격근무는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 원격근무 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "원격근무는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 원격근무 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
+      "keyword": "기술동향",
+      "score": 100,
+      "growth": 191,
+      "category": "trends",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 157,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "url": "https://dev.to/search?q=%EC%9B%90%EA%B2%A9%EA%B7%BC%EB%AC%B4&page=2",
-      "title": "원격근무 관련 최신 기술 동향",
-      "content": "원격근무는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 원격근무 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "원격근무"
-      ],
-      "relevanceScore": 97,
-      "crawledAt": "2025-08-21T22:08:13.442Z",
-      "qualityScore": 74.1,
-      "excerpt": "원격근무는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 원격근무 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "원격근무는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 원격근무 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
+      "keyword": "TypeScript",
+      "score": 100,
+      "growth": 170,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 151,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "url": "https://news.ycombinator.com/search?q=%EA%B8%B0%EC%88%A0%EB%8F%99%ED%96%A5&page=3",
-      "title": "기술동향 관련 최신 기술 동향",
-      "content": "기술동향는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 기술동향 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "기술동향"
-      ],
-      "relevanceScore": 97,
-      "crawledAt": "2025-08-21T22:09:09.719Z",
-      "qualityScore": 74.1,
-      "excerpt": "기술동향는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 기술동향 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "기술동향는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 기술동향 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
+      "keyword": "React",
+      "score": 100,
+      "growth": 168,
+      "category": "webdev",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 150,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     },
     {
-      "url": "https://dev.to/search?q=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4&page=2",
-      "title": "메타버스 관련 최신 기술 동향",
-      "content": "메타버스는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 메타버스 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "메타버스"
-      ],
-      "relevanceScore": 97,
-      "crawledAt": "2025-08-21T22:10:14.079Z",
-      "qualityScore": 74.1,
-      "excerpt": "메타버스는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 메타버스 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "메타버스는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 메타버스 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=%EB%AF%B8%EB%9E%98%EA%B8%B0%EC%88%A0&page=2",
-      "title": "미래기술 관련 최신 기술 동향",
-      "content": "미래기술는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 미래기술 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "미래기술"
-      ],
-      "relevanceScore": 96,
-      "crawledAt": "2025-08-21T22:10:23.123Z",
-      "qualityScore": 73.8,
-      "excerpt": "미래기술는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 미래기술 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "미래기술는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 미래기술 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=chatgpt&page=1",
-      "title": "chatgpt 관련 최신 기술 동향",
-      "content": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 chatgpt 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "chatgpt"
-      ],
-      "relevanceScore": 95,
-      "crawledAt": "2025-08-21T22:08:35.560Z",
-      "qualityScore": 73.5,
-      "excerpt": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=chatgpt&page=2",
-      "title": "chatgpt 관련 최신 기술 동향",
-      "content": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 chatgpt 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "chatgpt"
-      ],
-      "relevanceScore": 95,
-      "crawledAt": "2025-08-21T22:08:37.565Z",
-      "qualityScore": 73.5,
-      "excerpt": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=chatgpt&page=3",
-      "title": "chatgpt 관련 최신 기술 동향",
-      "content": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 chatgpt 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "chatgpt"
-      ],
-      "relevanceScore": 95,
-      "crawledAt": "2025-08-21T22:08:45.614Z",
-      "qualityScore": 73.5,
-      "excerpt": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B2%BD%ED%97%98&page=3",
-      "title": "사용자경험 관련 최신 기술 동향",
-      "content": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 사용자경험 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "사용자경험"
-      ],
-      "relevanceScore": 94,
-      "crawledAt": "2025-08-21T22:08:54.646Z",
-      "qualityScore": 73.2,
-      "excerpt": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 사용자경험 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 사용자경험 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=flutter&page=3",
-      "title": "flutter 관련 최신 기술 동향",
-      "content": "flutter는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 flutter 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "flutter"
-      ],
-      "relevanceScore": 93,
-      "crawledAt": "2025-08-21T22:09:39.890Z",
-      "qualityScore": 72.9,
-      "excerpt": "flutter는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "flutter는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=chatgpt&page=2",
-      "title": "chatgpt 관련 최신 기술 동향",
-      "content": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 chatgpt 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "chatgpt"
-      ],
-      "relevanceScore": 92,
-      "crawledAt": "2025-08-21T22:08:43.601Z",
-      "qualityScore": 72.6,
-      "excerpt": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "chatgpt는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 chatgpt 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B2%BD%ED%97%98&page=2",
-      "title": "사용자경험 관련 최신 기술 동향",
-      "content": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 사용자경험 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "사용자경험"
-      ],
-      "relevanceScore": 92,
-      "crawledAt": "2025-08-21T22:08:52.632Z",
-      "qualityScore": 72.6,
-      "excerpt": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 사용자경험 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "사용자경험는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 사용자경험 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85&page=2",
-      "title": "스타트업 관련 최신 기술 동향",
-      "content": "스타트업는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 스타트업 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "스타트업"
-      ],
-      "relevanceScore": 92,
-      "crawledAt": "2025-08-21T22:09:52.969Z",
-      "qualityScore": 72.6,
-      "excerpt": "스타트업는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 스타트업 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "스타트업는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 스타트업 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=flutter&page=2",
-      "title": "flutter 관련 최신 기술 동향",
-      "content": "flutter는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 flutter 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "flutter"
-      ],
-      "relevanceScore": 91,
-      "crawledAt": "2025-08-21T22:09:37.872Z",
-      "qualityScore": 72.3,
-      "excerpt": "flutter는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "flutter는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://news.ycombinator.com/search?q=flutter&page=1",
-      "title": "flutter 관련 최신 기술 동향",
-      "content": "flutter는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 flutter 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "flutter"
-      ],
-      "relevanceScore": 90,
-      "crawledAt": "2025-08-21T22:09:35.865Z",
-      "qualityScore": 72,
-      "excerpt": "flutter는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "flutter는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 flutter 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=next.js&page=1",
-      "title": "next.js 관련 최신 기술 동향",
-      "content": "next.js는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 next.js 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "next.js"
-      ],
-      "relevanceScore": 89,
-      "crawledAt": "2025-08-21T22:08:26.509Z",
-      "qualityScore": 71.7,
-      "excerpt": "next.js는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 next.js 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "next.js는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 next.js 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=next.js&page=2",
-      "title": "next.js 관련 최신 기술 동향",
-      "content": "next.js는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 next.js 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "next.js"
-      ],
-      "relevanceScore": 89,
-      "crawledAt": "2025-08-21T22:08:28.519Z",
-      "qualityScore": 71.7,
-      "excerpt": "next.js는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 next.js 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "next.js는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 next.js 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=%EA%B8%B0%EC%88%A0%EB%8F%99%ED%96%A5&page=2",
-      "title": "기술동향 관련 최신 기술 동향",
-      "content": "기술동향는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 기술동향 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "기술동향"
-      ],
-      "relevanceScore": 89,
-      "crawledAt": "2025-08-21T22:09:13.737Z",
-      "qualityScore": 71.7,
-      "excerpt": "기술동향는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 기술동향 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "기술동향는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 기술동향 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
-    },
-    {
-      "url": "https://dev.to/search?q=%EB%AF%B8%EB%9E%98%EA%B8%B0%EC%88%A0&page=3",
-      "title": "미래기술 관련 최신 기술 동향",
-      "content": "미래기술는 현재 가장 주목받는 기술 중 하나입니다. \n                최근 연구에 따르면 미래기술 기술의 발전으로 인해 \n                업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 \n                융합을 통해 새로운 가능성이 열리고 있습니다.",
-      "publishDate": "2025-08-21",
-      "author": "Tech Writer",
-      "tags": [
-        "미래기술"
-      ],
-      "relevanceScore": 87,
-      "crawledAt": "2025-08-21T22:10:31.166Z",
-      "qualityScore": 71.1,
-      "excerpt": "미래기술는 현재 가장 주목받는 기술 중 하나입니다 최근 연구에 따르면 미래기술 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다",
-      "cleanContent": "미래기술는 현재 가장 주목받는 기술 중 하나입니다. 최근 연구에 따르면 미래기술 기술의 발전으로 인해 업계에 큰 변화가 예상됩니다. 특히 관련 기술과의 융합을 통해 새로운 가능성이 열리고 있습니다."
+      "keyword": "미래기술",
+      "score": 100,
+      "growth": 159,
+      "category": "trends",
+      "source": "google-trends-interest",
+      "region": "KR",
+      "finalScore": 148,
+      "timestamp": "2025-08-22T11:16:46.167Z"
     }
   ],
-  "keywordsProcessed": [
-    "원격근무",
-    "next.js",
-    "chatgpt",
-    "사용자경험",
-    "기술동향",
-    "모바일앱",
-    "flutter",
-    "스타트업",
-    "메타버스",
-    "미래기술"
-  ],
-  "sources": [
-    "https://news.ycombinator.com",
-    "https://dev.to",
-    "https://medium.com/topic/programming",
-    "https://blog.naver.com",
-    "https://velog.io",
-    "https://tistory.com"
-  ],
+  "urlSources": {
+    "JavaScript": [],
+    "기술동향": [],
+    "TypeScript": [],
+    "React": [],
+    "미래기술": []
+  },
+  "crawlResults": {
+    "total": 0,
+    "successful": 0,
+    "processed": 0
+  },
+  "processedContent": [],
+  "summary": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  },
+  "processingDetails": {
+    "overview": {
+      "totalProcessed": 0,
+      "successRate": "NaN%"
+    },
+    "filtering": {},
+    "topResults": []
+  },
+  "config": {
+    "sources": {
+      "tech": [
+        "https://news.ycombinator.com",
+        "https://dev.to",
+        "https://medium.com/topic/programming"
+      ],
+      "korean": [
+        "https://blog.naver.com",
+        "https://velog.io",
+        "https://tistory.com"
+      ]
+    }
+  },
   "metadata": {
     "generatedBy": "crawl-content.js",
-    "version": "1.0.0",
-    "executionTime": 1755814236197,
-    "config": {
-      "maxPagesPerSource": 5,
-      "crawlDelay": 2000
+    "version": "2.0.0",
+    "crawlerConfig": {
+      "headless": true,
+      "timeout": 30000,
+      "waitForSelector": 3000,
+      "maxConcurrent": 3,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
   }
 }
