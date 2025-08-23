@@ -32,6 +32,29 @@ class FileUtils {
   }
 
   /**
+   * 텍스트 파일 쓰기
+   */
+  static async writeFile(filePath, content) {
+    const dir = path.dirname(filePath);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(filePath, content, 'utf8');
+  }
+
+  /**
+   * 텍스트 파일 읽기
+   */
+  static async readFile(filePath) {
+    try {
+      return await fs.readFile(filePath, 'utf8');
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        return null; // 파일이 없으면 null 반환
+      }
+      throw error;
+    }
+  }
+
+  /**
    * 텍스트 파일 읽기
    */
   static async readText(filePath) {

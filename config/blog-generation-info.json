@@ -1,0 +1,32 @@
+{
+  "date": "2025-08-23",
+  "timestamp": "2025-08-23T01:17:40.252Z",
+  "executionTimeMs": 38097,
+  "blog": {
+    "title": "AI 버블 붕괴 직전? 이 징후들을 주목하세요!",
+    "filename": "20250823-technology-the-warning-signs-the-ai-bubble-is-about.md",
+    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250823-technology-the-warning-signs-the-ai-bubble-is-about.md",
+    "contentLength": 2371,
+    "wordCount": 390
+  },
+  "source": {
+    "subreddit": "technology",
+    "originalTitle": "The warning signs the AI bubble is about to burst",
+    "originalUrl": "https://reddit.com/r/technology/comments/1mx1p2c/the_warning_signs_the_ai_bubble_is_about_to_burst/",
+    "engagement": {
+      "upvotes": 13063,
+      "comments": 1735
+    }
+  },
+  "stats": {
+    "aiModel": "gpt-4",
+    "promptTokens": "estimated",
+    "completionTokens": "estimated",
+    "totalCost": "estimated"
+  },
+  "metadata": {
+    "generatedBy": "generate-reddit-blog.js",
+    "version": "1.0.0",
+    "aiGenerator": "openai-reddit-generator"
+  }
+}
