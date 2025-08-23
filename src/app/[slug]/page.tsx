@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { generateSEOMetadata, generateJSONLD, StructuredData } from '@/components/SEO'
 
 interface PostPageProps {
@@ -155,7 +156,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
         
         <div className="mt-12 text-center">
-          <a 
+          <Link 
             href="/" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
@@ -163,7 +164,7 @@ export default async function PostPage({ params }: PostPageProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             더 많은 글 보기
-          </a>
+          </Link>
         </div>
       </footer>
     </article>
