@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang={theme.language} className="scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
         <StructuredData data={jsonLD} />
       </head>
       <body className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 flex flex-col antialiased">
