@@ -75,8 +75,8 @@ const siteConfig = {
       
       // AI 글쓰기 설정
       aiSettings: {
-        promptTemplate: "engaging", // 'informative', 'engaging', 'analytical', 'technical', 'casual'
-        gptModel: "gpt-4-turbo", // 'gpt-3.5-turbo', 'gpt-4', 'gpt-4-turbo'  
+        promptTemplate: "summary", // 'informative', 'engaging', 'analytical', 'technical', 'casual', 'summary'
+        gptModel: "gpt-4o", // 'gpt-3.5-turbo', 'gpt-4', 'gpt-4-turbo'  
         includeComments: true,
         commentAnalysis: true
       }
@@ -138,6 +138,12 @@ const siteConfig = {
         description: "친근하고 편안한 대화체로 쉽게 읽을 수 있는 글쓰기 스타일",
         blogStyle: "casual", 
         tone: "friendly"
+      },
+      summary: {
+        name: "쉬운 요약형",
+        description: "복잡한 내용을 쉬운 용어로 간단명료하게 핵심만 정리해서 설명하는 글쓰기 스타일",
+        blogStyle: "summary",
+        tone: "simple"
       }
     },
     

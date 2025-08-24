@@ -261,6 +261,18 @@ class EmailNotifier {
                     <p><strong>언어:</strong> 한국어</p>
                 </div>
             </div>
+            
+            ${blogData.tokenUsage ? `
+            <div class="info-card" style="grid-column: 1 / -1; margin-top: 20px;">
+                <h3>🔢 토큰 사용량</h3>
+                <p><strong>프롬프트 토큰:</strong> ${blogData.tokenUsage.prompt_tokens.toLocaleString()}개</p>
+                <p><strong>완성 토큰:</strong> ${blogData.tokenUsage.completion_tokens.toLocaleString()}개</p>
+                <p><strong>총 토큰:</strong> ${blogData.tokenUsage.total_tokens.toLocaleString()}개</p>
+            </div>
+            ` : ''}
+            
+            <div style="display: none;">
+            </div>
 
             <div class="source-info">
                 <h3>📍 원본 소스 정보</h3>
@@ -282,9 +294,7 @@ class EmailNotifier {
             <div class="stats">
                 <h3>📊 생성 통계</h3>
                 <p>• <strong>태그:</strong> ${metadata.tags.join(', ')}</p>
-                <p>• <strong>예상 읽기 시간:</strong> ${metadata.readingTime}분</p>
-                <p>• <strong>SEO 키워드:</strong> ${metadata.seo.keywords}</p>
-                <p>• <strong>작성자:</strong> ${metadata.seo.author}</p>
+                <p>• <strong>작성자:</strong> ${metadata.author}</p>
             </div>
 
             <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -318,7 +328,10 @@ class EmailNotifier {
 📄 블로그 정보:
 - 파일명: ${blog.filename}
 - 글자 수: ${blog.contentLength.toLocaleString()}자
-- 생성 시간: ${Math.round(generationInfo.executionTimeMs / 1000)}초
+- 생성 시간: ${Math.round(generationInfo.executionTimeMs / 1000)}초${blogData.tokenUsage ? `
+- 프롬프트 토큰: ${blogData.tokenUsage.prompt_tokens.toLocaleString()}개
+- 완성 토큰: ${blogData.tokenUsage.completion_tokens.toLocaleString()}개
+- 총 토큰: ${blogData.tokenUsage.total_tokens.toLocaleString()}개` : ''}
 
 📍 원본 소스:
 - 플랫폼: ${metadata.source.platform}
@@ -334,7 +347,7 @@ class EmailNotifier {
 - 카테고리: ${metadata.category}
 - 태그: ${metadata.tags.join(', ')}
 - 언어: 한국어
-- 작성자: ${metadata.seo.author}
+- 작성자: ${metadata.author}
 
 ---
 이 이메일은 WebMaker AI 블로그 자동 생성 시스템에서 발송되었습니다.

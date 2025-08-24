@@ -174,7 +174,7 @@ class RedditBlogGenerator {
       // 3. 파일명 및 slug 생성
       const { filename, slug } = this.generateFilenameAndSlug(
         blogData.title, 
-        blogData.metadata.seo.publishDate, 
+        blogData.metadata.date, 
         blogData
       );
       const outputPath = path.join(this.outputDir, filename);
@@ -183,7 +183,7 @@ class RedditBlogGenerator {
       blogData.metadata.slug = slug;
       
       // 4. 마크다운 형식으로 포맷팅 (slug가 포함된 상태로)
-      const markdownContent = this.aiGenerator.formatAsMarkdownPost(blogData);
+      const markdownContent = this.aiGenerator.generateMarkdownContent(blogData);
       
       await FileUtils.writeFile(outputPath, markdownContent);
       

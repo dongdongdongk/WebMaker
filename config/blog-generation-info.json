@@ -1,21 +1,21 @@
 {
-  "date": "2025-08-23",
-  "timestamp": "2025-08-23T21:23:15.255Z",
-  "executionTimeMs": 50649,
+  "date": "2025-08-24",
+  "timestamp": "2025-08-24T10:27:48.873Z",
+  "executionTimeMs": 13464,
   "blog": {
-    "title": "구글 AI 에너지 비용, 1년 만에 33배 절감 비결 공개!",
-    "filename": "20250824-0623-technology-google-says-it-dropped-the-ene.md",
-    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250824-0623-technology-google-says-it-dropped-the-ene.md",
-    "contentLength": 3064,
-    "wordCount": 563
+    "title": "미국 국토안보부 문자 데이터 삭제, 책임 추궁 불가?",
+    "filename": "20250824-1927-technology-us-homeland-security-dept-says.md",
+    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250824-1927-technology-us-homeland-security-dept-says.md",
+    "contentLength": 2025,
+    "wordCount": 311
   },
   "source": {
     "subreddit": "technology",
-    "originalTitle": "Google says it dropped the energy cost of AI queries by 33x in one year",
-    "originalUrl": "https://reddit.com/r/technology/comments/1mxn9l6/google_says_it_dropped_the_energy_cost_of_ai/",
+    "originalTitle": "US Homeland Security Dept. says it hasn’t kept text message data since April -- “You can’t hold people accountable if you don’t know what they’re doing”: former Justice Dept. counsel",
+    "originalUrl": "https://reddit.com/r/technology/comments/1my14fc/us_homeland_security_dept_says_it_hasnt_kept_text/",
     "engagement": {
-      "upvotes": 5110,
-      "comments": 394
+      "upvotes": 2143,
+      "comments": 56
     }
   },
   "stats": {

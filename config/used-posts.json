@@ -1,33 +1,73 @@
 {
   "posts": [
     {
-      "id": "1mxyi0p",
-      "title": "Silicon Valley is full of wealthy men who think they’re victims, says Nick Clegg",
+      "id": "1mygo93",
+      "title": "China's Great Firewall blocked all traffic to a common HTTPS port for over an hour, severing connection to the outside world — with no hint as to its intention",
       "subreddit": "technology",
-      "upvotes": 9573,
-      "usedAt": "2025-08-23T21:12:26.263Z",
-      "url": "https://reddit.com/r/technology/comments/1mxyi0p/silicon_valley_is_full_of_wealthy_men_who_think/"
+      "upvotes": 1216,
+      "usedAt": "2025-08-24T08:41:30.020Z",
+      "url": "https://reddit.com/r/technology/comments/1mygo93/chinas_great_firewall_blocked_all_traffic_to_a/"
+    },
+    {
+      "id": "1mydyxd",
+      "title": "“ALL HAIL CHAIRMAN TRUMP! WITH HIS GLORIOUS 10% PURCHASE OF INTEL, THE SOCIALIST REPUBLIC OF AMERICA ENTERS A BOLD NEW ERA” -- California governor Newsom riles Republicans with Trump-trolling posts",
+      "subreddit": "technology",
+      "upvotes": 39607,
+      "usedAt": "2025-08-24T08:45:01.646Z",
+      "url": "https://reddit.com/r/technology/comments/1mydyxd/all_hail_chairman_trump_with_his_glorious_10/"
     },
     {
       "id": "1my87i0",
       "title": "The United States of America now owns 10% of Intel",
       "subreddit": "technology",
-      "upvotes": 7034,
-      "usedAt": "2025-08-23T21:13:40.370Z",
+      "upvotes": 15883,
+      "usedAt": "2025-08-24T08:45:12.759Z",
       "url": "https://reddit.com/r/technology/comments/1my87i0/the_united_states_of_america_now_owns_10_of_intel/"
     },
     {
-      "id": "1mxn9l6",
-      "title": "Google says it dropped the energy cost of AI queries by 33x in one year",
+      "id": "1mxyi0p",
+      "title": "Silicon Valley is full of wealthy men who think they’re victims, says Nick Clegg",
       "subreddit": "technology",
-      "upvotes": 5110,
-      "usedAt": "2025-08-23T21:22:25.327Z",
-      "url": "https://reddit.com/r/technology/comments/1mxn9l6/google_says_it_dropped_the_energy_cost_of_ai/"
+      "upvotes": 11492,
+      "usedAt": "2025-08-24T08:45:54.025Z",
+      "url": "https://reddit.com/r/technology/comments/1mxyi0p/silicon_valley_is_full_of_wealthy_men_who_think/"
+    },
+    {
+      "id": "1myaljs",
+      "title": "Artificial intelligence is 'not human' and 'not intelligent' says expert, amid rise of 'AI psychosis'",
+      "subreddit": "technology",
+      "upvotes": 3893,
+      "usedAt": "2025-08-24T10:20:38.213Z",
+      "url": "https://reddit.com/r/technology/comments/1myaljs/artificial_intelligence_is_not_human_and_not/"
+    },
+    {
+      "id": "1my03yt",
+      "title": "AI looks increasingly useless in telecom and anywhere else",
+      "subreddit": "technology",
+      "upvotes": 3624,
+      "usedAt": "2025-08-24T10:22:16.072Z",
+      "url": "https://reddit.com/r/technology/comments/1my03yt/ai_looks_increasingly_useless_in_telecom_and/"
+    },
+    {
+      "id": "1myc0x6",
+      "title": "Scientists found the missing nutrients bees need — Colonies grew 15-fold",
+      "subreddit": "technology",
+      "upvotes": 3217,
+      "usedAt": "2025-08-24T10:23:39.469Z",
+      "url": "https://reddit.com/r/technology/comments/1myc0x6/scientists_found_the_missing_nutrients_bees_need/"
+    },
+    {
+      "id": "1my14fc",
+      "title": "US Homeland Security Dept. says it hasn’t kept text message data since April -- “You can’t hold people accountable if you don’t know what they’re doing”: former Justice Dept. counsel",
+      "subreddit": "technology",
+      "upvotes": 2143,
+      "usedAt": "2025-08-24T10:27:36.373Z",
+      "url": "https://reddit.com/r/technology/comments/1my14fc/us_homeland_security_dept_says_it_hasnt_kept_text/"
     }
   ],
   "lastCleanup": "2025-08-24T05:56:58Z",
   "stats": {
-    "totalUsed": 3,
-    "cleanupCount": 0
+    "totalUsed": 8,
+    "cleanupCount": 10
   }
 }

@@ -156,19 +156,19 @@ class RedditSubreddit {
       let url, headers;
 
       if (this.useOfficialAPI && this.accessToken) {
-        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=10`;
+        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=25`;
         headers = {
           'Authorization': `Bearer ${this.accessToken}`,
           'User-Agent': this.userAgent
         };
       } else {
-        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=10`;
+        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=25`;
         headers = {
           'User-Agent': this.userAgent
         };
       }
 
-      await this.logger.info(`일일 top 글 조회: r/${subreddit} (후보 10개)`);
+      await this.logger.info(`일일 top 글 조회: r/${subreddit} (후보 25개)`);
 
       const response = await axios.get(url, { headers, timeout: 10000 });
 
