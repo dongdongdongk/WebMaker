@@ -71,7 +71,7 @@ export default function PostGrid({
             총 {filteredPosts.length}개의 글
             {searchQuery && (
               <span className="ml-2 px-2 py-1 text-sm bg-blue-50 text-blue-600 rounded-full">
-                '{searchQuery}' 검색 결과
+                &lsquo;{searchQuery}&rsquo; 검색 결과
               </span>
             )}
           </p>
@@ -97,7 +97,7 @@ export default function PostGrid({
             </svg>
           </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">검색 결과를 찾을 수 없습니다</h3>
-          <p className="text-gray-500 mb-6">'{searchQuery}'와 관련된 글이 없습니다. 다른 검색어를 시도해보세요.</p>
+          <p className="text-gray-500 mb-6">&lsquo;{searchQuery}&rsquo;와 관련된 글이 없습니다. 다른 검색어를 시도해보세요.</p>
           <button
             onClick={() => handleSearch('')}
             className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
