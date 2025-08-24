@@ -52,10 +52,10 @@ const siteConfig = {
     
     // Reddit 서브레딧 설정 (기존 reddit-config.json 통합)
     contentSources: {
-      selectedSubreddit: "technology", // 메인 서브레딧
+      selectedSubreddit: "Tiktokhelp", // 메인 서브레딧
       fallbackSubreddits: ["programming", "webdev", "artificial"], // 대체 서브레딧들
       targetAudience: "general", // 'general', 'expert', 'beginner'
-      outputLanguage: "korean", // 'korean', 'english', 'japanese'
+      outputLanguage: "english", // 'korean', 'english', 'japanese'
       
       // 댓글 수집 제한
       commentLimits: {

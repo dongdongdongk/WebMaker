@@ -179,9 +179,10 @@ class UsedPostsManager {
       const config = await this.loadUsedPosts();
       const usedIds = new Set(
         config.posts
-          .filter(post => post.subreddit === subreddit)
+          .filter(post => post.subreddit.toLowerCase() === subreddit.toLowerCase())
           .map(post => post.id)
       );
+      
       
       const filteredPosts = posts.filter(post => !usedIds.has(post.id));
       

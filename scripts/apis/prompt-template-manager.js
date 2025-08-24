@@ -143,6 +143,9 @@ class PromptTemplateManager {
     return `
 Create a simple, easy-to-understand summary blog post about: ${aiData.original.title}
 
+Blog Context: This content is from r/${aiData.source.subreddit} - ${aiData.source.description || ''}
+IMPORTANT: Make sure the entire blog post stays relevant to the ${aiData.source.subreddit} community theme. Connect the topic to relevant concepts, strategies, tools, or applications within this field whenever possible.
+
 Target: ${audience} (especially beginners and non-experts)
 Language: ${outputLang} 
 Length: Write a short 400-600 word article that focuses on clarity and simplicity
@@ -154,7 +157,7 @@ ${naturalInsights}
 Available Images:
 ${imageInfo}
 
-핵심 요구사항:
+Core Requirements:
 1. Write entirely in ${outputLang}
 2. Create 400-600 word easy-to-understand article
 3. Replace all technical terms with everyday language
@@ -164,20 +167,20 @@ ${imageInfo}
 7. Include ONE content image (second image) in a relevant section
 8. End with genuine 3-line summary of key takeaways
 
-쉬운 요약형 구조:
-- 한눈에 파악할 수 있는 간단한 소개 (80-100단어)
-- 가장 중요한 2-3가지 핵심 포인트를 쉬운 용어로 설명 (각 80-120단어)
-- 실생활에 어떤 영향을 미치는지 간단 정리 (80-100단어)
-- 3줄 요약으로 마무리 (50-80단어)
+Easy Summary Structure:
+- Simple introduction that can be understood at a glance (80-100 words)
+- Explain 2-3 most important key points in simple terms (80-120 words each)
+- Simple summary of how it affects real life (80-100 words)
+- Finish with 3-line summary (50-80 words)
 
 Writing Guidelines:
-- 중학생도 이해할 수 있는 수준으로 작성 (스낵처럼 가볍게)
-- 전문 용어는 반드시 쉬운 말로 바꿔서 설명
-- 친근하고 재미있게
-- 불필요한 세부사항은 모두 생략
-- 핵심만 간단명료하게 전달 (스낵 컨텐츠처럼)
-- 읽기 쉽고 부담 없는 스타일
-- 마지막에 정말 중요한 내용 3줄로 요약
+- Write at a level that middle school students can understand (light like a snack)
+- Always replace technical terms with easy explanations
+- Friendly and interesting tone
+- Omit all unnecessary details
+- Deliver only the core message clearly and concisely (like snack content)
+- Easy-to-read and stress-free style
+- Summarize really important content in 3 lines at the end
 
 Write a simple, snack-like blog post that anyone can quickly read and understand, focusing only on the most important points.`;
   }
@@ -188,6 +191,9 @@ Write a simple, snack-like blog post that anyone can quickly read and understand
   createDetailedPrompt(aiData, title, settings, templateConfig, imageInfo, naturalInsights, outputLang, audience) {
     return `
 Create a comprehensive, in-depth blog post about: ${aiData.original.title}
+
+Blog Context: This content is from r/${aiData.source.subreddit} - ${aiData.source.description || ''}
+IMPORTANT: Make sure the entire blog post stays relevant to the ${aiData.source.subreddit} community theme. Connect the topic to relevant concepts, strategies, tools, or applications within this field whenever possible.
 
 Target: ${audience}
 Language: ${outputLang} 

@@ -156,19 +156,19 @@ class RedditSubreddit {
       let url, headers;
 
       if (this.useOfficialAPI && this.accessToken) {
-        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=25`;
+        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=100`;
         headers = {
           'Authorization': `Bearer ${this.accessToken}`,
           'User-Agent': this.userAgent
         };
       } else {
-        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=25`;
+        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=100`;
         headers = {
           'User-Agent': this.userAgent
         };
       }
 
-      await this.logger.info(`일일 top 글 조회: r/${subreddit} (후보 25개)`);
+      await this.logger.info(`일일 top 글 조회: r/${subreddit} (후보 100개)`);
 
       const response = await axios.get(url, { headers, timeout: 10000 });
 
@@ -183,37 +183,30 @@ class RedditSubreddit {
           return null;
         }
         
-        // 조건에 맞는 첫 번째 글 찾기
-        for (const post of filteredPosts) {
-          if (post.ups > 50 && !post.over_18 && !post.stickied) {
-            // 사용된 글로 기록
-            await this.usedPostsManager.addUsedPost({
-              id: post.id,
-              title: post.title,
-              subreddit: post.subreddit,
-              upvotes: post.ups,
-              url: `https://reddit.com${post.permalink}`
-            });
-            
-            return post;
-          }
+        // 성인 콘텐츠 및 고정글 필터링 후 업보트 기준으로 정렬
+        const validPosts = filteredPosts.filter(post => !post.over_18 && !post.stickied);
+        
+        if (validPosts.length === 0) {
+          await this.logger.warning(`r/${subreddit}에서 유효한 글이 없음 (성인 콘텐츠/고정글 제외)`);
+          return null;
         }
         
-        // 조건에 맞는 것이 없으면 첫 번째 것 사용
-        if (filteredPosts.length > 0) {
-          const post = filteredPosts[0];
-          
-          // 사용된 글로 기록
-          await this.usedPostsManager.addUsedPost({
-            id: post.id,
-            title: post.title,
-            subreddit: post.subreddit,
-            upvotes: post.ups,
-            url: `https://reddit.com${post.permalink}`
-          });
-          
-          return post;
-        }
+        // 업보트 수 기준으로 내림차순 정렬 (가장 높은 것 먼저)
+        validPosts.sort((a, b) => b.ups - a.ups);
+        const post = validPosts[0];
+        
+        await this.logger.info(`선택된 글: ${post.ups} 업보트 - "${post.title.substring(0, 50)}..."`);
+        
+        // 사용된 글로 기록
+        await this.usedPostsManager.addUsedPost({
+          id: post.id,
+          title: post.title,
+          subreddit: post.subreddit,
+          upvotes: post.ups,
+          url: `https://reddit.com${post.permalink}`
+        });
+        
+        return post;
       }
 
       return null;
