@@ -157,7 +157,8 @@
   
   /* Modern Blog Typography */
   .blog-content {
-    @apply max-w-none w-full;
+    @apply w-full;
+    max-width: 750px;
   }
   
   .blog-content h1,
@@ -168,11 +169,21 @@
   .blog-content h6 {
     @apply text-gray-900 font-bold;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.025em;
   }
   
   .blog-content p {
-    @apply text-gray-700 leading-relaxed mb-6;
-    font-size: 1.125rem;
+    @apply text-gray-700 mb-6;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+  
+  .blog-content p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
   
   .blog-content a {

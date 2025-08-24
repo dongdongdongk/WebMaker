@@ -42,11 +42,38 @@ class DateUtils {
   }
 
   /**
+   * 파일명에 사용할 날짜시분 형식 (20250121-1430)
+   */
+  static getDateTimeForFilename(date = new Date()) {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const hour = String(d.getHours()).padStart(2, '0');
+    const minute = String(d.getMinutes()).padStart(2, '0');
+    return `${year}${month}${day}-${hour}${minute}`;
+  }
+
+  /**
    * 슬러그용 날짜 형식 (2025-01-21)
    */
   static getDateForSlug(date = new Date()) {
     const d = new Date(date);
     return d.toISOString().split('T')[0];
+  }
+
+  /**
+   * frontmatter용 날짜시분 형식 (2025-08-23T14:30:00)
+   */
+  static getDateTimeForFrontmatter(date = new Date()) {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const hour = String(d.getHours()).padStart(2, '0');
+    const minute = String(d.getMinutes()).padStart(2, '0');
+    const second = String(d.getSeconds()).padStart(2, '0');
+    return `${year}-${month}-${day}T${hour}:${minute}:${second}`;
   }
 
   /**

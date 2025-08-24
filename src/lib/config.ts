@@ -22,6 +22,78 @@ export interface SiteConfig {
     author: string
     email: string
     companyName: string
+    footerDescription: string
+  }
+  blogTheme: {
+    type: string
+    primaryColor: {
+      50: string
+      100: string
+      200: string
+      500: string
+      600: string
+      700: string
+    }
+    secondaryColor: {
+      50: string
+      100: string
+      500: string
+      600: string
+      700: string
+    }
+    contentSources: {
+      selectedSubreddit: string
+      fallbackSubreddits: string[]
+      targetAudience: string
+      outputLanguage: string
+      commentLimits: {
+        topComments: number
+        newComments: number
+        maxTotal: number
+      }
+      filterSettings: {
+        minUpvotes: number
+        minCommentLength: number
+        excludeDeleted: boolean
+        excludeRemoved: boolean
+        excludeNSFW: boolean
+      }
+      aiSettings: {
+        promptTemplate: string
+        gptModel: string
+        includeComments: boolean
+        commentAnalysis: boolean
+      }
+    }
+    availableModels: Record<string, {
+      name: string
+      description: string
+      maxTokens: number
+      costPerToken: string
+      speed: string
+    }>
+    promptTemplates: Record<string, {
+      name: string
+      description: string
+      blogStyle: string
+      tone: string
+    }>
+    imageKeywords: Record<string, string>
+  }
+  uiText: {
+    featuredArticleLabel: string
+    staffPicksTitle: string
+    latestArticlesTitle: string
+    totalInsightsText: string
+    loadMoreButton: string
+    noMorePostsTitle: string
+    noMorePostsSubtitle: string
+    backToHomeText: string
+    footerSectionTitle: string
+    featureBadges: Array<{
+      icon: string
+      text: string
+    }>
   }
   social: {
     twitter: string
@@ -47,6 +119,7 @@ export interface SiteConfig {
     showDate: boolean
     enableComments: boolean
     enableSearch: boolean
+    defaultAuthor: string
   }
   navigation: {
     main: Array<{ name: string; href: string; external?: boolean }>
@@ -74,13 +147,22 @@ export interface SiteConfig {
       og: string
     }
   }
-  automation: {
-    enabled: boolean
-    schedule: string
-    postsPerDay: number
-    categories: string[]
-    targetAudience: string
-    contentLanguage: string
+  footer: {
+    sections: Array<{
+      title: string | null
+      content: 'description' | 'navigation' | 'social' | 'automation' | 'custom'
+      customText?: string | null
+      customLinks?: Array<{ name: string; href: string }>
+    }>
+    automation: {
+      schedule: string
+      technology: string
+    }
+    copyright: {
+      text: string
+      showYear: boolean
+      showCompany: boolean
+    }
   }
   email: {
     from: string
@@ -134,14 +216,30 @@ export function getContentConfig() {
   return siteConfig.content
 }
 
+// 기본 작가 정보
+export function getDefaultAuthor() {
+  return siteConfig.content.defaultAuthor
+}
+
+// UI 텍스트
+export function getUIText() {
+  return siteConfig.uiText
+}
+
+// 블로그 주제 설정
+export function getBlogTheme() {
+  return siteConfig.blogTheme
+}
+
 // 이미지 설정
 export function getImageConfig() {
   return siteConfig.images
 }
 
-// 자동화 설정
-export function getAutomationConfig() {
-  return siteConfig.automation
+
+// 푸터 설정
+export function getFooterConfig() {
+  return siteConfig.footer
 }
 
 // 이메일 설정

@@ -5,6 +5,8 @@
 
 const OpenAI = require('openai');
 const UnsplashImageService = require('./unsplash-image-service');
+const DateUtils = require('../utils/date-utils');
+const siteConfig = require('../../config/site.config.js');
 
 class OpenAIRedditGenerator {
   constructor(logger) {
@@ -488,7 +490,7 @@ Write an engaging, unique blog post that doesn't feel templated or formulaic.`;
       seo: {
         canonical: null,
         keywords: tags.slice(0, 5).join(', '),
-        author: 'WebMaker AI',
+        author: siteConfig.content.defaultAuthor,
         publishDate: new Date().toISOString().split('T')[0]
       },
       source: {
@@ -509,14 +511,17 @@ Write an engaging, unique blog post that doesn't feel templated or formulaic.`;
     // 메인 이미지 URL 결정
     const imageUrl = mainImage?.url || `https://picsum.photos/1200/600?random=${Date.now()}`;
     
+    // 현재 시간으로 시분까지 포함된 date 생성
+    const currentDateTime = DateUtils.getDateTimeForFrontmatter();
+    
     const frontMatter = `---
 title: "${title}"
 slug: "${metadata.slug || ''}"
-date: "${metadata.seo.publishDate}"
+date: "${currentDateTime}"
 description: "${metadata.description}"
 tags: [${metadata.tags.map(tag => `"${tag}"`).join(', ')}]
 category: "${metadata.category}"
-author: "${metadata.seo.author}"
+author: "${siteConfig.content.defaultAuthor}"
 image: "${imageUrl}"
 source:
   platform: "${metadata.source.platform}"

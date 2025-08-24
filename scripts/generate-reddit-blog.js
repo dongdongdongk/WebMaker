@@ -95,7 +95,8 @@ class RedditBlogGenerator {
    * 파일명과 slug 생성 (영어 기반 안전한 파일명)
    */
   generateFilenameAndSlug(title, date, redditData) {
-    const dateStr = date.replace(/-/g, '');
+    // 시분까지 포함된 파일명 생성
+    const dateTimeStr = DateUtils.getDateTimeForFilename();
     
     // Reddit 소스 기반으로 영어 slug 생성
     const subreddit = redditData.sourceData.subreddit;
@@ -103,9 +104,9 @@ class RedditBlogGenerator {
       .toLowerCase()
       .replace(/[^a-z0-9\s]/g, '') // 영어와 숫자만 남김
       .replace(/\s+/g, '-') // 공백을 하이픈으로
-      .substring(0, 40); // 길이 제한
+      .substring(0, 30); // 길이 제한 (시분 포함으로 줄임)
     
-    const slug = `${dateStr}-${subreddit}-${originalTitle}`;
+    const slug = `${dateTimeStr}-${subreddit}-${originalTitle}`;
     const filename = `${slug}.md`;
     
     return { filename, slug };
@@ -116,16 +117,35 @@ class RedditBlogGenerator {
    */
   async loadConfig() {
     try {
-      const FileUtils = require('./utils/file-utils');
-      const configPath = path.join(__dirname, '../config/reddit-config.json');
-      return await FileUtils.readJson(configPath);
-    } catch (error) {
-      await this.logger.warning('Reddit 설정 로드 실패, 기본값 사용');
+      const siteConfig = require('../config/site.config.js');
+      const contentSources = siteConfig.blogTheme.contentSources;
+      
       return {
+        selectedSubreddit: contentSources.selectedSubreddit,
+        fallbackSubreddits: contentSources.fallbackSubreddits,
+        commentLimits: contentSources.commentLimits,
+        filterSettings: contentSources.filterSettings,
+        availableModels: siteConfig.blogTheme.availableModels,
+        promptTemplates: siteConfig.blogTheme.promptTemplates,
+        aiPromptSettings: {
+          promptTemplate: contentSources.aiSettings.promptTemplate,
+          gptModel: contentSources.aiSettings.gptModel,
+          targetAudience: contentSources.targetAudience,
+          language: "english",
+          outputLanguage: contentSources.outputLanguage,
+          includeComments: contentSources.aiSettings.includeComments,
+          commentAnalysis: contentSources.aiSettings.commentAnalysis
+        }
+      };
+    } catch (error) {
+      await this.logger.warning('사이트 설정 로드 실패, 기본값 사용');
+      return {
+        selectedSubreddit: "technology",
+        fallbackSubreddits: ["programming", "webdev"],
         aiPromptSettings: {
           language: 'english',
           outputLanguage: 'korean',
-          blogStyle: 'informative',
+          promptTemplate: 'informative',
           targetAudience: 'general'
         }
       };

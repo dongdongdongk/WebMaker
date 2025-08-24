@@ -1,21 +1,21 @@
 {
   "date": "2025-08-23",
-  "timestamp": "2025-08-23T01:17:40.252Z",
-  "executionTimeMs": 38097,
+  "timestamp": "2025-08-23T21:23:15.255Z",
+  "executionTimeMs": 50649,
   "blog": {
-    "title": "AI 버블 붕괴 직전? 이 징후들을 주목하세요!",
-    "filename": "20250823-technology-the-warning-signs-the-ai-bubble-is-about.md",
-    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250823-technology-the-warning-signs-the-ai-bubble-is-about.md",
-    "contentLength": 2371,
-    "wordCount": 390
+    "title": "구글 AI 에너지 비용, 1년 만에 33배 절감 비결 공개!",
+    "filename": "20250824-0623-technology-google-says-it-dropped-the-ene.md",
+    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250824-0623-technology-google-says-it-dropped-the-ene.md",
+    "contentLength": 3064,
+    "wordCount": 563
   },
   "source": {
     "subreddit": "technology",
-    "originalTitle": "The warning signs the AI bubble is about to burst",
-    "originalUrl": "https://reddit.com/r/technology/comments/1mx1p2c/the_warning_signs_the_ai_bubble_is_about_to_burst/",
+    "originalTitle": "Google says it dropped the energy cost of AI queries by 33x in one year",
+    "originalUrl": "https://reddit.com/r/technology/comments/1mxn9l6/google_says_it_dropped_the_energy_cost_of_ai/",
     "engagement": {
-      "upvotes": 13063,
-      "comments": 1735
+      "upvotes": 5110,
+      "comments": 394
     }
   },
   "stats": {

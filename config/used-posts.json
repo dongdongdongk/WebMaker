@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": "1mxyi0p",
+      "title": "Silicon Valley is full of wealthy men who think they’re victims, says Nick Clegg",
+      "subreddit": "technology",
+      "upvotes": 9573,
+      "usedAt": "2025-08-23T21:12:26.263Z",
+      "url": "https://reddit.com/r/technology/comments/1mxyi0p/silicon_valley_is_full_of_wealthy_men_who_think/"
+    },
+    {
+      "id": "1my87i0",
+      "title": "The United States of America now owns 10% of Intel",
+      "subreddit": "technology",
+      "upvotes": 7034,
+      "usedAt": "2025-08-23T21:13:40.370Z",
+      "url": "https://reddit.com/r/technology/comments/1my87i0/the_united_states_of_america_now_owns_10_of_intel/"
+    },
+    {
+      "id": "1mxn9l6",
+      "title": "Google says it dropped the energy cost of AI queries by 33x in one year",
+      "subreddit": "technology",
+      "upvotes": 5110,
+      "usedAt": "2025-08-23T21:22:25.327Z",
+      "url": "https://reddit.com/r/technology/comments/1mxn9l6/google_says_it_dropped_the_energy_cost_of_ai/"
+    }
+  ],
+  "lastCleanup": "2025-08-24T05:56:58Z",
+  "stats": {
+    "totalUsed": 3,
+    "cleanupCount": 0
+  }
+}

@@ -4,6 +4,7 @@
  */
 
 const axios = require('axios');
+const UsedPostsManager = require('../utils/used-posts-manager');
 
 class RedditSubreddit {
   constructor(logger) {
@@ -22,6 +23,9 @@ class RedditSubreddit {
     
     // API 사용 모드 결정
     this.useOfficialAPI = !!(this.clientId && this.clientSecret);
+    
+    // 중복 방지 관리자
+    this.usedPostsManager = new UsedPostsManager(logger);
     
     // 추천 서브레딧 목록 (카테고리별)
     this.recommendedSubreddits = {
@@ -84,6 +88,11 @@ class RedditSubreddit {
     await this.logger.info(`r/${subreddit}에서 일일 top 글 수집 중`);
 
     try {
+      // 오래된 기록 정리 (필요시)
+      if (await this.usedPostsManager.shouldCleanup()) {
+        await this.usedPostsManager.cleanupOldPosts();
+      }
+
       // 공식 API 인증 시도
       if (this.useOfficialAPI) {
         const authSuccess = await this.authenticateOAuth();
@@ -140,43 +149,70 @@ class RedditSubreddit {
   }
 
   /**
-   * 서브레딧에서 일일 top 글 가져오기
+   * 서브레딧에서 일일 top 글 가져오기 (중복 제외)
    */
   async getTopPost(subreddit) {
     try {
       let url, headers;
 
       if (this.useOfficialAPI && this.accessToken) {
-        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=5`;
+        url = `${this.oauthURL}/r/${subreddit}/top?t=day&limit=10`;
         headers = {
           'Authorization': `Bearer ${this.accessToken}`,
           'User-Agent': this.userAgent
         };
       } else {
-        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=5`;
+        url = `${this.baseURL}/r/${subreddit}/top.json?t=day&limit=10`;
         headers = {
           'User-Agent': this.userAgent
         };
       }
 
-      await this.logger.info(`일일 top 글 조회: r/${subreddit}`);
+      await this.logger.info(`일일 top 글 조회: r/${subreddit} (후보 10개)`);
 
       const response = await axios.get(url, { headers, timeout: 10000 });
 
       if (response.data && response.data.data && response.data.data.children) {
-        const posts = response.data.data.children;
+        const posts = response.data.data.children.map(postObj => postObj.data);
         
-        // 적절한 포스트 찾기 (스티키가 아니고, 충분한 upvote, 성인 콘텐츠 아님)
-        for (const postObj of posts) {
-          const post = postObj.data;
+        // 중복 제외 필터링
+        const filteredPosts = await this.usedPostsManager.filterUnusedPosts(posts, subreddit);
+        
+        if (filteredPosts.length === 0) {
+          await this.logger.warning(`r/${subreddit}에서 사용 가능한 글이 없음 (모두 중복)`);
+          return null;
+        }
+        
+        // 조건에 맞는 첫 번째 글 찾기
+        for (const post of filteredPosts) {
           if (post.ups > 50 && !post.over_18 && !post.stickied) {
+            // 사용된 글로 기록
+            await this.usedPostsManager.addUsedPost({
+              id: post.id,
+              title: post.title,
+              subreddit: post.subreddit,
+              upvotes: post.ups,
+              url: `https://reddit.com${post.permalink}`
+            });
+            
             return post;
           }
         }
         
-        // 조건에 맞는 것이 없으면 첫 번째 것 반환
-        if (posts.length > 0) {
-          return posts[0].data;
+        // 조건에 맞는 것이 없으면 첫 번째 것 사용
+        if (filteredPosts.length > 0) {
+          const post = filteredPosts[0];
+          
+          // 사용된 글로 기록
+          await this.usedPostsManager.addUsedPost({
+            id: post.id,
+            title: post.title,
+            subreddit: post.subreddit,
+            upvotes: post.ups,
+            url: `https://reddit.com${post.permalink}`
+          });
+          
+          return post;
         }
       }
 
@@ -355,6 +391,20 @@ class RedditSubreddit {
    */
   getRecommendedSubreddits() {
     return this.recommendedSubreddits;
+  }
+
+  /**
+   * 사용된 글 통계 조회
+   */
+  async getUsageStats() {
+    return await this.usedPostsManager.getStats();
+  }
+
+  /**
+   * 사용된 글 기록 초기화 (개발용)
+   */
+  async resetUsedPosts() {
+    return await this.usedPostsManager.resetAllPosts();
   }
 
   /**
