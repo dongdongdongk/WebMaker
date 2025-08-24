@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { PostSummary } from '@/lib/posts'
 import SearchBox from './SearchBox'
 import Pagination from './Pagination'
+import { getRelativeTime } from '@/lib/time-utils'
 
 interface PostGridProps {
   posts: PostSummary[]
@@ -134,7 +135,7 @@ export default function PostGrid({
                 <div className="p-6">
                   <div className="flex items-center mb-3 text-sm text-gray-500">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                    <time className="font-medium">{new Date(post.date).toLocaleDateString('ko-KR')}</time>
+                    <time className="font-medium">{getRelativeTime(post.date)}</time>
                   </div>
                   
                   <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 leading-tight">

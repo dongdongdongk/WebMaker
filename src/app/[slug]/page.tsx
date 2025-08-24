@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { generateSEOMetadata, generateJSONLD, StructuredData } from '@/components/SEO'
 import { getBranding, getUIText } from '@/lib/config'
+import { getRelativeTime } from '@/lib/time-utils'
 
 interface PostPageProps {
   params: Promise<{ slug: string }>
@@ -93,7 +94,7 @@ export default async function PostPage({ params }: PostPageProps) {
               <div className="flex items-end justify-center pb-6">
                 <div className="flex items-center text-sm text-white/90 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  <time dateTime={post.date} className="font-medium">{formattedDate}</time>
+                  <time dateTime={post.date} className="font-medium">{getRelativeTime(post.date)}</time>
                 </div>
               </div>
             </div>
