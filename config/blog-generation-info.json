@@ -1,21 +1,21 @@
 {
   "date": "2025-08-24",
-  "timestamp": "2025-08-24T10:27:48.873Z",
-  "executionTimeMs": 13464,
+  "timestamp": "2025-08-24T15:29:50.155Z",
+  "executionTimeMs": 12718,
   "blog": {
-    "title": "미국 국토안보부 문자 데이터 삭제, 책임 추궁 불가?",
-    "filename": "20250824-1927-technology-us-homeland-security-dept-says.md",
-    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250824-1927-technology-us-homeland-security-dept-says.md",
-    "contentLength": 2025,
-    "wordCount": 311
+    "title": "코인베이스 CEO, AI 거부한 엔지니어 해고! 충격적 결정",
+    "filename": "20250824-1529-technology-coinbase-ceo-fired-engineers-w.md",
+    "path": "/home/runner/work/WebMaker/WebMaker/content/posts/20250824-1529-technology-coinbase-ceo-fired-engineers-w.md",
+    "contentLength": 1650,
+    "wordCount": 292
   },
   "source": {
     "subreddit": "technology",
-    "originalTitle": "US Homeland Security Dept. says it hasn’t kept text message data since April -- “You can’t hold people accountable if you don’t know what they’re doing”: former Justice Dept. counsel",
-    "originalUrl": "https://reddit.com/r/technology/comments/1my14fc/us_homeland_security_dept_says_it_hasnt_kept_text/",
+    "originalTitle": "Coinbase CEO fired engineers who refused to use AI",
+    "originalUrl": "https://reddit.com/r/technology/comments/1mytws2/coinbase_ceo_fired_engineers_who_refused_to_use_ai/",
     "engagement": {
-      "upvotes": 2143,
-      "comments": 56
+      "upvotes": 1633,
+      "comments": 208
     }
   },
   "stats": {
