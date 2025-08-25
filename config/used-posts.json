@@ -191,11 +191,19 @@
       "upvotes": 10,
       "usedAt": "2025-08-25T04:37:27.171Z",
       "url": "https://reddit.com/r/DigitalMarketing/comments/1mze71f/should_i_keep_going_for_influencer_marketing/"
+    },
+    {
+      "id": "1mzkgd2",
+      "title": "What are the best email marketing platforms? (For small businesses, nonprofits &amp; ecommerce)",
+      "subreddit": "DigitalMarketing",
+      "upvotes": 15,
+      "usedAt": "2025-08-25T13:30:49.513Z",
+      "url": "https://reddit.com/r/DigitalMarketing/comments/1mzkgd2/what_are_the_best_email_marketing_platforms_for/"
     }
   ],
   "lastCleanup": "2025-08-24T05:56:58Z",
   "stats": {
-    "totalUsed": 27,
+    "totalUsed": 28,
     "cleanupCount": 10
   }
 }

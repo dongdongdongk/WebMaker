@@ -1,21 +1,21 @@
 {
   "date": "2025-08-25",
-  "timestamp": "2025-08-25T04:37:40.736Z",
-  "executionTimeMs": 14673,
+  "timestamp": "2025-08-25T13:31:07.583Z",
+  "executionTimeMs": 18988,
   "blog": {
-    "title": "인플루언서 마케팅, 계속해야 할까요? 성공 전략 공개!",
-    "filename": "20250825-1337-DigitalMarketing-should-i-keep-going-for-influe.md",
-    "path": "F:\\2025WebProject\\WebMaker\\content\\posts\\20250825-1337-DigitalMarketing-should-i-keep-going-for-influe.md",
-    "contentLength": 2005,
-    "wordCount": 293
+    "title": "소규모 사업·비영리·이커머스를 위한 최고의 이메일 마케팅 플랫폼",
+    "filename": "20250825-1331-DigitalMarketing-what-are-the-best-email-market.md",
+    "path": "/home/runner/work/WebMaker/WebMaker/content/posts/20250825-1331-DigitalMarketing-what-are-the-best-email-market.md",
+    "contentLength": 1714,
+    "wordCount": 281
   },
   "source": {
     "subreddit": "DigitalMarketing",
-    "originalTitle": "Should I keep going for influencer marketing?",
-    "originalUrl": "https://reddit.com/r/DigitalMarketing/comments/1mze71f/should_i_keep_going_for_influencer_marketing/",
+    "originalTitle": "What are the best email marketing platforms? (For small businesses, nonprofits &amp; ecommerce)",
+    "originalUrl": "https://reddit.com/r/DigitalMarketing/comments/1mzkgd2/what_are_the_best_email_marketing_platforms_for/",
     "engagement": {
-      "upvotes": 10,
-      "comments": 14
+      "upvotes": 15,
+      "comments": 2
     }
   },
   "stats": {
