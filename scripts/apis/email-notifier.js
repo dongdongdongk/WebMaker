@@ -256,9 +256,9 @@ class EmailNotifier {
                 <div class="info-card">
                     <h3>⏱️ 생성 정보</h3>
                     <p><strong>생성 시간:</strong> ${Math.round(generationInfo.executionTimeMs / 1000)}초</p>
-                    <p><strong>AI 모델:</strong> ${stats.aiModel}</p>
+                    <p><strong>AI 모델:</strong> ${blogData.aiModel || 'gpt-4o'}</p>
                     <p><strong>생성 일시:</strong> ${new Date().toLocaleString('ko-KR')}</p>
-                    <p><strong>언어:</strong> 한국어</p>
+                    <p><strong>언어:</strong> ${blogData.outputLanguage === 'english' ? 'English' : '한국어'}</p>
                 </div>
             </div>
             

@@ -14,21 +14,27 @@ class MetadataGenerator {
   /**
    * 메타데이터 생성 (프론트매터용)
    */
-  generateMetadata(aiData, title, settings, mainImage) {
+  generateMetadata(aiData, title, settings, mainImage, aiGeneratedTags = []) {
     const now = new Date();
     const config = this.siteConfig;
     
-    // 기본 태그들
-    const baseTags = [
-      config.blogTheme?.contentSources?.selectedSubreddit || "technology",
-      "기술", 
-      "IT", 
-      "트렌드"
-    ];
-
-    // AI가 생성한 추가 태그들 (제목에서 키워드 추출)
-    const additionalTags = this.extractTagsFromTitle(title);
-    const allTags = [...new Set([...baseTags, ...additionalTags])];
+    // AI가 생성한 태그 우선 사용
+    let allTags = [];
+    
+    if (aiGeneratedTags.length > 0) {
+      // AI가 태그를 생성했으면 그것을 사용
+      allTags = [...aiGeneratedTags];
+    } else {
+      // AI 태그가 없으면 기존 방식으로 생성
+      const baseTags = [
+        config.blogTheme?.contentSources?.selectedSubreddit || "technology",
+        "기술", 
+        "IT", 
+        "트렌드"
+      ];
+      const additionalTags = this.extractTagsFromTitle(title);
+      allTags = [...new Set([...baseTags, ...additionalTags])];
+    }
 
     return {
       title: title,

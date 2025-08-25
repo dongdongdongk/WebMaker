@@ -182,7 +182,22 @@ Writing Guidelines:
 - Easy-to-read and stress-free style
 - Summarize really important content in 3 lines at the end
 
-Write a simple, snack-like blog post that anyone can quickly read and understand, focusing only on the most important points.`;
+Write a simple, snack-like blog post that anyone can quickly read and understand, focusing only on the most important points.
+
+IMPORTANT: At the end of your response, add a separate section with exactly 3-4 relevant tags:
+===TAGS===
+tag1, tag2, tag3, tag4
+===TAGS===
+
+Tag Requirements:
+- Use 3-4 tags maximum
+- Must be relevant to both the content AND the ${aiData.source.subreddit} community
+- Use single words or 2-word phrases
+- Write tags in ${outputLang === 'Korean' ? 'Korean' : 'English'}
+- Examples for different communities:
+  - DigitalMarketing: "Digital Marketing", "SEO", "Content Marketing", "Social Media" 
+  - Tiktokhelp: "TikTok", "Viral", "Content Creation", "Social Media"
+  - Technology: "Technology", "AI", "Programming", "Innovation"`;
   }
 
   /**
@@ -253,7 +268,22 @@ Format and Flow:
 - End with a comprehensive conclusion that ties everything together
 - Ensure smooth transitions between sections for natural flow
 
-Write a comprehensive, authoritative blog post that provides exceptional value to readers through depth, insight, and practical application. This should be a definitive resource on the topic.`;
+Write a comprehensive, authoritative blog post that provides exceptional value to readers through depth, insight, and practical application. This should be a definitive resource on the topic.
+
+IMPORTANT: At the end of your response, add a separate section with exactly 3-4 relevant tags:
+===TAGS===
+tag1, tag2, tag3, tag4
+===TAGS===
+
+Tag Requirements:
+- Use 3-4 tags maximum
+- Must be relevant to both the content AND the ${aiData.source.subreddit} community
+- Use single words or 2-word phrases  
+- Write tags in ${outputLang === 'Korean' ? 'Korean' : 'English'}
+- Examples for different communities:
+  - DigitalMarketing: "Digital Marketing", "SEO", "Content Marketing", "Social Media"
+  - Tiktokhelp: "TikTok", "Viral", "Content Creation", "Social Media"
+  - Technology: "Technology", "AI", "Programming", "Innovation"`;
   }
 }
 

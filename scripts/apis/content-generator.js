@@ -120,13 +120,43 @@ Generate only the title, nothing else.`;
       total_tokens: response.usage?.total_tokens || 0
     };
 
-    const content = response.choices[0].message.content.trim();
+    const rawContent = response.choices[0].message.content.trim();
     
-    // 토큰 정보를 content와 함께 반환
+    // AI가 생성한 태그 추출
+    const { content, tags } = this.extractTagsFromContent(rawContent);
+    
+    // 토큰 정보와 태그를 content와 함께 반환
     return {
       content: content,
+      tags: tags,
       tokenUsage: tokenUsage
     };
+  }
+
+  /**
+   * AI 응답에서 태그 추출
+   */
+  extractTagsFromContent(rawContent) {
+    const tagRegex = /===TAGS===([\s\S]*?)===TAGS===/;
+    const match = rawContent.match(tagRegex);
+    
+    let tags = [];
+    let content = rawContent;
+    
+    if (match) {
+      // 태그 섹션 발견
+      const tagSection = match[1].trim();
+      tags = tagSection
+        .split(',')
+        .map(tag => tag.trim())
+        .filter(tag => tag.length > 0)
+        .slice(0, 4); // 최대 4개로 제한
+      
+      // 태그 섹션 제거
+      content = rawContent.replace(tagRegex, '').trim();
+    }
+    
+    return { content, tags };
   }
 }
 

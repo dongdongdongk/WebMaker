@@ -56,10 +56,11 @@ class OpenAIRedditGeneratorRefactored {
         aiData, title, settings, templateConfig, modelConfig, allImages
       );
       const content = contentResult.content;
+      const aiGeneratedTags = contentResult.tags || [];
       const tokenUsage = contentResult.tokenUsage;
       
-      // 4. 메타데이터 생성 (첫 번째 이미지를 메인 이미지로 사용)
-      const metadata = this.metadataGenerator.generateMetadata(aiData, title, settings, allImages[0]);
+      // 4. 메타데이터 생성 (첫 번째 이미지를 메인 이미지로 사용, AI 생성 태그 포함)
+      const metadata = this.metadataGenerator.generateMetadata(aiData, title, settings, allImages[0], aiGeneratedTags);
 
       const result = {
         title,
@@ -75,6 +76,8 @@ class OpenAIRedditGeneratorRefactored {
         },
         generatedAt: new Date().toISOString(),
         promptTemplate: settings.promptTemplate,
+        aiModel: settings.gptModel,
+        outputLanguage: settings.outputLanguage,
         imagesAdded: allImages.length,
         tokenUsage: tokenUsage
       };
